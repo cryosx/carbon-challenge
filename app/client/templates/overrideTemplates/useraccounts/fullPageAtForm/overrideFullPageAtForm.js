@@ -1,0 +1,1 @@
+Template['overrideFullPageAtForm'].replaces('fullPageAtForm');

@@ -16,6 +16,26 @@ standard-minifiers      # JS/CSS minifiers run for production mode
 es5-shim                # ECMAScript 5 compatibility for older browsers.
 ecmascript              # Enable ECMAScript2015+ syntax in app code
 
-autopublish             # Publish all data to the clients (for prototyping)
 insecure                # Allow all DB writes from clients (for prototyping)
 fourseven:scss
+accounts-base
+accounts-ui
+accounts-facebook
+accounts-google
+accounts-twitter
+accounts-password
+alanning:roles
+aldeed:autoform
+aldeed:collection2
+aldeed:simple-schema
+aldeed:tabular
+aldeed:template-extension
+dburles:google-maps
+kadira:flow-router
+kadira:blaze-layout
+materialize:materialize
+mizzao:autocomplete
+useraccounts:core
+useraccounts:materialize
+zimme:active-route
+useraccounts:flow-routing
