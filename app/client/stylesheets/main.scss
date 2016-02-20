@@ -13,8 +13,12 @@
 }
 
 /*
- * CUSTOMIZED MATERIALIZECSS CL
+ * CUSTOMIZED MATERIALIZECSS
  */
+
+.z-depth-1, nav, .card-panel, .card, .toast, .btn, .btn-large, .btn-floating, .dropdown-content, .collapsible, .side-nav {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 0 0 rgba(0, 0, 0, 0.12);
+}
 
 /*
  * CUSTOM HAMBURGER MENU AND ANIMATIONS
@@ -284,7 +288,6 @@ $scale: 1; // icon scale 68/68 default
 *, *:before, *:after {
   box-sizing: border-box;
 }
-
 //
 //// spacing + background-color
 //body {

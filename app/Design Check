@@ -1,6 +1,6 @@
 I will be making questionable design choices and recording them here
 
-[1] Blurred Background for SignIn/SignUp form
+[1] Blurred Background for SignIn/SignUp Form
 
 Location:
 
@@ -31,4 +31,12 @@ Details:
           filter: blur(5px);
         }
 
- [2]
+[2] Excessive Use of <black-text> to Convert White Icons and Text to Black
+
+Location:
+
+    ~/client/templates/shared/header
+
+Resolution:
+
+    I should consider changeing the default color to white so that I don't have to keep using <black-text>
