@@ -1,0 +1,44 @@
+<template name="overrideAtTermsLink">
+    <div class="at-terms-link at-wrap">
+        <p>
+            {{text}}
+            {{#if privacyUrl}}
+                <!--<a href="{{privacyUrl}}" class="{{disabled}}">{{privacyLinkText}}</a>-->
+
+                <!-- Modal Trigger For Privacy Policy-->
+                <a href="#modal-privacy-policy" class="modal-trigger {{disabled}}">{{privacyLinkText}}</a>
+                <!-- Modal Structure -->
+                <div id="modal-privacy-policy" class="modal modal-fixed-footer">
+                    <div class="modal-content">
+                        {{> privacyPolicy}}
+                    </div>
+                    <div class="modal-footer">
+                        <a href="" class="modal-action modal-close waves-effect waves-green btn-flat ">Agree</a>
+                    </div>
+                </div>
+            {{/if}}
+            {{#if showTermsAnd}}
+                {{and}}
+            {{/if}}
+            {{#if termsUrl}}
+                <!--<a href="{{termsUrl}}" class="{{disabled}}">{{termsLinkText}}</a>-->
+
+                <!-- Modal Trigger For Terms of Use-->
+                <a href="#modal-terms-of-use" class="modal-trigger {{disabled}}">{{termsLinkText}}</a>
+                <!-- Modal Structure -->
+                <div id="modal-terms-of-use" class="modal modal-fixed-footer">
+                    <div class="modal-content">
+                        {{> termsOfUse}}
+                    </div>
+                    <div class="modal-footer">
+                        <a href="" class="modal-action modal-close waves-effect waves-green btn-flat ">Agree</a>
+                    </div>
+                </div>
+            {{/if}}
+        </p>
+
+
+    </div>
+
+
+</template>

@@ -1,15 +1,27 @@
 <template name="masterLayout">
-
-    <div class="nav">
+{{#if Template.subscriptionsReady}}
+    {{#momentum plugin="flow-router"}}
         {{> Template.dynamic template=header}}
-    </div>
-
-    <div class="content">
         {{> Template.dynamic template=main}}
-    </div>
-
-    <footer>
         {{> Template.dynamic template=footer}}
-    </footer>
 
+        <!--{{#if Template.subscriptionsReady}}-->
+            <!--<div class="nav">-->
+                <!--{{> Template.dynamic template=header}}-->
+            <!--</div>-->
+
+            <!--<div class="content">-->
+                <!--{{> Template.dynamic template=main}}-->
+            <!--</div>-->
+
+            <!--<footer>-->
+                <!--{{> Template.dynamic template=footer}}-->
+            <!--</footer>-->
+        <!--{{else}}-->
+            <!--{{> loading}}-->
+        <!--{{/if}}-->
+    {{/momentum}}
+{{else}}
+    {{> loading}}
+{{/if}}
 </template>

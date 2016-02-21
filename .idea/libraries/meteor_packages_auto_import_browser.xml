@@ -7,6 +7,7 @@
         <item url="file://$USER_HOME$/.meteor/packages/aldeed_autoform/5.8.1/web.browser/inputTypes/datetime/datetime.js" />
         <item url="file://$USER_HOME$/.meteor/packages/aldeed_autoform/5.8.1/web.browser/inputTypes/submit/submit.js" />
         <item url="file://$USER_HOME$/.meteor/packages/aldeed_autoform/5.8.1/web.browser/inputTypes/select/select.js" />
+        <item url="file://$USER_HOME$/.meteor/packages/arillo_flow-router-helpers/0.5.1/web.browser/client/helpers.coffee" />
         <item url="file://$USER_HOME$/.meteor/packages/aldeed_autoform/5.8.1/web.browser/inputTypes/search/search.js" />
         <item url="file://$USER_HOME$/.meteor/packages/aldeed_autoform/5.8.1/web.browser/inputTypes/number/number.js" />
         <item url="file://$USER_HOME$/.meteor/packages/aldeed_autoform/5.8.1/web.browser/inputTypes/hidden/hidden.js" />
@@ -14,6 +15,7 @@
         <item url="file://$USER_HOME$/.meteor/packages/aldeed_autoform/5.8.1/web.browser/inputTypes/reset/reset.js" />
         <item url="file://$USER_HOME$/.meteor/packages/aldeed_autoform/5.8.1/web.browser/inputTypes/range/range.js" />
         <item url="file://$USER_HOME$/.meteor/packages/aldeed_autoform/5.8.1/web.browser/inputTypes/radio/radio.js" />
+        <item url="file://$USER_HOME$/.meteor/packages/cfs_http-methods/0.0.30/web.browser/packages/cfs_http-methods.js" />
         <item url="file://$USER_HOME$/.meteor/packages/aldeed_autoform/5.8.1/web.browser/inputTypes/month/month.js" />
         <item url="file://$USER_HOME$/.meteor/packages/aldeed_autoform/5.8.1/web.browser/inputTypes/image/image.js" />
         <item url="file://$USER_HOME$/.meteor/packages/aldeed_autoform/5.8.1/web.browser/inputTypes/email/email.js" />
@@ -95,8 +97,6 @@
         <item url="file://$USER_HOME$/.meteor/packages/twitter/1.1.5/web.browser/twitter_client.js" />
         <item url="file://$USER_HOME$/.meteor/packages/aldeed_autoform/5.8.1/web.browser/components/autoForm/autoForm.js" />
         <item url="file://$USER_HOME$/.meteor/packages/aldeed_autoform/5.8.1/web.browser/templates/bootstrap3-horizontal/bootstrap3-horizontal.css" />
-        <item url="file://$USER_HOME$/.meteor/packages/materialize_materialize/0.97.5/web.browser/dist/css/materialize.css" />
-        <item url="file://$USER_HOME$/.meteor/packages/materialize_materialize/0.97.5/web.browser/dist/js/materialize.js" />
         <item url="file://$USER_HOME$/.meteor/packages/aldeed_autoform/5.8.1/web.browser/templates/bootstrap3-inline/bootstrap3-inline.js" />
         <item url="file://$USER_HOME$/.meteor/packages/aldeed_autoform/5.8.1/web.browser/templates/bootstrap3-inline/bootstrap3-inline.css" />
         <item url="file://$USER_HOME$/.meteor/packages/aldeed_autoform/5.8.1/web.browser/templates/plain-fieldset/plain-fieldset.js" />
@@ -352,24 +352,36 @@
         <item url="file://$USER_HOME$/.meteor/packages/accounts-ui-unstyled/1.1.8/web.browser/login_buttons_single.js" />
         <item url="file://$USER_HOME$/.meteor/packages/aldeed_autoform/5.8.1/web.browser/inputTypes/select-radio-inline/select-radio-inline.js" />
         <item url="file://$USER_HOME$/.meteor/packages/aldeed_autoform/5.8.1/web.browser/inputTypes/boolean-checkbox/boolean-checkbox.js" />
+        <item url="file://$USER_HOME$/.meteor/packages/philippspo_momentum-flow-router/0.0.7/web.browser/packages/philippspo_momentum-flow-router/style.css" />
+        <item url="file://$USER_HOME$/.meteor/packages/philippspo_momentum-flow-router/0.0.7/web.browser/packages/philippspo_momentum-flow-router.js" />
         <item url="file://$USER_HOME$/.meteor/packages/npm-bcrypt/0.7.8_2/web.browser/packages/npm-bcrypt.js" />
+        <item url="file://$USER_HOME$/.meteor/packages/percolate_velocityjs/1.1.0/web.browser/packages/percolate:velocityjs.js" />
         <item url="file://$USER_HOME$/.meteor/packages/aldeed_autoform/5.8.1/web.browser/inputTypes/select-multiple/select-multiple.js" />
         <item url="file://$USER_HOME$/.meteor/packages/mizzao_autocomplete/0.5.1/web.browser/packages/mizzao:autocomplete/autocomplete.css" />
         <item url="file://$USER_HOME$/.meteor/packages/sha/1.0.4/web.browser/sha256.js" />
+        <item url="file://$USER_HOME$/.meteor/packages/tap_i18n/1.7.0/web.browser/lib/tap_i18next/tap_i18next-1.7.3.js" />
         <item url="file://$USER_HOME$/.meteor/packages/aldeed_autoform/5.8.1/web.browser/inputTypes/select-checkbox/select-checkbox.js" />
         <item url="file://$USER_HOME$/.meteor/packages/mizzao_autocomplete/0.5.1/web.browser/packages/mizzao:autocomplete.js" />
+        <item url="file://$USER_HOME$/.meteor/packages/percolate_momentum/0.7.2/web.browser/packages/percolate:momentum.js" />
+        <item url="file://$USER_HOME$/.meteor/packages/tap_i18n/1.7.0/web.browser/lib/tap_i18next/tap_i18next_init.js" />
+        <item url="file://$USER_HOME$/.meteor/packages/tap_i18n/1.7.0/web.browser/lib/tap_i18n/tap_i18n-helpers.coffee" />
         <item url="file://$USER_HOME$/.meteor/packages/srp/1.0.4/web.browser/srp.js" />
+        <item url="file://$USER_HOME$/.meteor/packages/tap_i18n/1.7.0/web.browser/lib/tap_i18n/tap_i18n-init.coffee" />
         <item url="file://$USER_HOME$/.meteor/packages/aldeed_autoform/5.8.1/web.browser/inputTypes/contenteditable/contenteditable.js" />
         <item url="file://$USER_HOME$/.meteor/packages/srp/1.0.4/web.browser/biginteger.js" />
+        <item url="file://$USER_HOME$/.meteor/packages/tap_i18n/1.7.0/web.browser/lib/tap_i18n/tap_i18n-common.coffee" />
+        <item url="file://$USER_HOME$/.meteor/packages/tap_i18n/1.7.0/web.browser/lib/tap_i18n/tap_i18n-client.coffee" />
         <item url="file://$USER_HOME$/.meteor/packages/aldeed_autoform/5.8.1/web.browser/inputTypes/datetime-local/datetime-local.js" />
         <item url="file://$USER_HOME$/.meteor/packages/dandv_caret-position/2.1.1/web.browser/packages/dandv:caret-position.js" />
         <item url="file://$USER_HOME$/.meteor/packages/aldeed_autoform/5.8.1/web.browser/inputTypes/boolean-select/boolean-select.js" />
+        <item url="file://$USER_HOME$/.meteor/packages/tap_i18n/1.7.0/web.browser/lib/globals.js" />
         <item url="file://$USER_HOME$/.meteor/packages/alanning_roles/1.2.14/web.browser/client/subscriptions.js" />
         <item url="file://$USER_HOME$/.meteor/packages/alanning_roles/1.2.14/web.browser/client/uiHelpers.js" />
         <item url="file://$USER_HOME$/.meteor/packages/aldeed_autoform/5.8.1/web.browser/inputTypes/boolean-radios/boolean-radios.js" />
         <item url="file://$USER_HOME$/.meteor/packages/alanning_roles/1.2.14/web.browser/client/debug.js" />
         <item url="file://$USER_HOME$/.meteor/packages/aldeed_autoform/5.8.1/web.browser/inputTypes/select-radio/select-radio.js" />
         <item url="file://$USER_HOME$/.meteor/packages/alanning_roles/1.2.14/web.browser/roles_common.js" />
+        <item url="file://$USER_HOME$/.meteor/packages/meteorspark_util/0.2.0/web.browser/packages/meteorspark_util.js" />
       </sourceFilesUrls>
     </properties>
     <CLASSES>
@@ -378,6 +390,7 @@
       <root url="file://$USER_HOME$/.meteor/packages/aldeed_autoform/5.8.1/web.browser/inputTypes/datetime/datetime.js" />
       <root url="file://$USER_HOME$/.meteor/packages/aldeed_autoform/5.8.1/web.browser/inputTypes/submit/submit.js" />
       <root url="file://$USER_HOME$/.meteor/packages/aldeed_autoform/5.8.1/web.browser/inputTypes/select/select.js" />
+      <root url="file://$USER_HOME$/.meteor/packages/arillo_flow-router-helpers/0.5.1/web.browser/client/helpers.coffee" />
       <root url="file://$USER_HOME$/.meteor/packages/aldeed_autoform/5.8.1/web.browser/inputTypes/search/search.js" />
       <root url="file://$USER_HOME$/.meteor/packages/aldeed_autoform/5.8.1/web.browser/inputTypes/number/number.js" />
       <root url="file://$USER_HOME$/.meteor/packages/aldeed_autoform/5.8.1/web.browser/inputTypes/hidden/hidden.js" />
@@ -385,6 +398,7 @@
       <root url="file://$USER_HOME$/.meteor/packages/aldeed_autoform/5.8.1/web.browser/inputTypes/reset/reset.js" />
       <root url="file://$USER_HOME$/.meteor/packages/aldeed_autoform/5.8.1/web.browser/inputTypes/range/range.js" />
       <root url="file://$USER_HOME$/.meteor/packages/aldeed_autoform/5.8.1/web.browser/inputTypes/radio/radio.js" />
+      <root url="file://$USER_HOME$/.meteor/packages/cfs_http-methods/0.0.30/web.browser/packages/cfs_http-methods.js" />
       <root url="file://$USER_HOME$/.meteor/packages/aldeed_autoform/5.8.1/web.browser/inputTypes/month/month.js" />
       <root url="file://$USER_HOME$/.meteor/packages/aldeed_autoform/5.8.1/web.browser/inputTypes/image/image.js" />
       <root url="file://$USER_HOME$/.meteor/packages/aldeed_autoform/5.8.1/web.browser/inputTypes/email/email.js" />
@@ -466,8 +480,6 @@
       <root url="file://$USER_HOME$/.meteor/packages/twitter/1.1.5/web.browser/twitter_client.js" />
       <root url="file://$USER_HOME$/.meteor/packages/aldeed_autoform/5.8.1/web.browser/components/autoForm/autoForm.js" />
       <root url="file://$USER_HOME$/.meteor/packages/aldeed_autoform/5.8.1/web.browser/templates/bootstrap3-horizontal/bootstrap3-horizontal.css" />
-      <root url="file://$USER_HOME$/.meteor/packages/materialize_materialize/0.97.5/web.browser/dist/css/materialize.css" />
-      <root url="file://$USER_HOME$/.meteor/packages/materialize_materialize/0.97.5/web.browser/dist/js/materialize.js" />
       <root url="file://$USER_HOME$/.meteor/packages/aldeed_autoform/5.8.1/web.browser/templates/bootstrap3-inline/bootstrap3-inline.js" />
       <root url="file://$USER_HOME$/.meteor/packages/aldeed_autoform/5.8.1/web.browser/templates/bootstrap3-inline/bootstrap3-inline.css" />
       <root url="file://$USER_HOME$/.meteor/packages/aldeed_autoform/5.8.1/web.browser/templates/plain-fieldset/plain-fieldset.js" />
@@ -723,24 +735,36 @@
       <root url="file://$USER_HOME$/.meteor/packages/accounts-ui-unstyled/1.1.8/web.browser/login_buttons_single.js" />
       <root url="file://$USER_HOME$/.meteor/packages/aldeed_autoform/5.8.1/web.browser/inputTypes/select-radio-inline/select-radio-inline.js" />
       <root url="file://$USER_HOME$/.meteor/packages/aldeed_autoform/5.8.1/web.browser/inputTypes/boolean-checkbox/boolean-checkbox.js" />
+      <root url="file://$USER_HOME$/.meteor/packages/philippspo_momentum-flow-router/0.0.7/web.browser/packages/philippspo_momentum-flow-router/style.css" />
+      <root url="file://$USER_HOME$/.meteor/packages/philippspo_momentum-flow-router/0.0.7/web.browser/packages/philippspo_momentum-flow-router.js" />
       <root url="file://$USER_HOME$/.meteor/packages/npm-bcrypt/0.7.8_2/web.browser/packages/npm-bcrypt.js" />
+      <root url="file://$USER_HOME$/.meteor/packages/percolate_velocityjs/1.1.0/web.browser/packages/percolate:velocityjs.js" />
       <root url="file://$USER_HOME$/.meteor/packages/aldeed_autoform/5.8.1/web.browser/inputTypes/select-multiple/select-multiple.js" />
       <root url="file://$USER_HOME$/.meteor/packages/mizzao_autocomplete/0.5.1/web.browser/packages/mizzao:autocomplete/autocomplete.css" />
       <root url="file://$USER_HOME$/.meteor/packages/sha/1.0.4/web.browser/sha256.js" />
+      <root url="file://$USER_HOME$/.meteor/packages/tap_i18n/1.7.0/web.browser/lib/tap_i18next/tap_i18next-1.7.3.js" />
       <root url="file://$USER_HOME$/.meteor/packages/aldeed_autoform/5.8.1/web.browser/inputTypes/select-checkbox/select-checkbox.js" />
       <root url="file://$USER_HOME$/.meteor/packages/mizzao_autocomplete/0.5.1/web.browser/packages/mizzao:autocomplete.js" />
+      <root url="file://$USER_HOME$/.meteor/packages/percolate_momentum/0.7.2/web.browser/packages/percolate:momentum.js" />
+      <root url="file://$USER_HOME$/.meteor/packages/tap_i18n/1.7.0/web.browser/lib/tap_i18next/tap_i18next_init.js" />
+      <root url="file://$USER_HOME$/.meteor/packages/tap_i18n/1.7.0/web.browser/lib/tap_i18n/tap_i18n-helpers.coffee" />
       <root url="file://$USER_HOME$/.meteor/packages/srp/1.0.4/web.browser/srp.js" />
+      <root url="file://$USER_HOME$/.meteor/packages/tap_i18n/1.7.0/web.browser/lib/tap_i18n/tap_i18n-init.coffee" />
       <root url="file://$USER_HOME$/.meteor/packages/aldeed_autoform/5.8.1/web.browser/inputTypes/contenteditable/contenteditable.js" />
       <root url="file://$USER_HOME$/.meteor/packages/srp/1.0.4/web.browser/biginteger.js" />
+      <root url="file://$USER_HOME$/.meteor/packages/tap_i18n/1.7.0/web.browser/lib/tap_i18n/tap_i18n-common.coffee" />
+      <root url="file://$USER_HOME$/.meteor/packages/tap_i18n/1.7.0/web.browser/lib/tap_i18n/tap_i18n-client.coffee" />
       <root url="file://$USER_HOME$/.meteor/packages/aldeed_autoform/5.8.1/web.browser/inputTypes/datetime-local/datetime-local.js" />
       <root url="file://$USER_HOME$/.meteor/packages/dandv_caret-position/2.1.1/web.browser/packages/dandv:caret-position.js" />
       <root url="file://$USER_HOME$/.meteor/packages/aldeed_autoform/5.8.1/web.browser/inputTypes/boolean-select/boolean-select.js" />
+      <root url="file://$USER_HOME$/.meteor/packages/tap_i18n/1.7.0/web.browser/lib/globals.js" />
       <root url="file://$USER_HOME$/.meteor/packages/alanning_roles/1.2.14/web.browser/client/subscriptions.js" />
       <root url="file://$USER_HOME$/.meteor/packages/alanning_roles/1.2.14/web.browser/client/uiHelpers.js" />
       <root url="file://$USER_HOME$/.meteor/packages/aldeed_autoform/5.8.1/web.browser/inputTypes/boolean-radios/boolean-radios.js" />
       <root url="file://$USER_HOME$/.meteor/packages/alanning_roles/1.2.14/web.browser/client/debug.js" />
       <root url="file://$USER_HOME$/.meteor/packages/aldeed_autoform/5.8.1/web.browser/inputTypes/select-radio/select-radio.js" />
       <root url="file://$USER_HOME$/.meteor/packages/alanning_roles/1.2.14/web.browser/roles_common.js" />
+      <root url="file://$USER_HOME$/.meteor/packages/meteorspark_util/0.2.0/web.browser/packages/meteorspark_util.js" />
     </CLASSES>
     <SOURCES />
   </library>

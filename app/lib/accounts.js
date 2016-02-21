@@ -20,7 +20,7 @@ AccountsTemplates.configure({
 
     // Appearance
     showAddRemoveServices: true,
-    showForgotPasswordLink: true,
+    showForgotPasswordLink: false,
     showLabels: true,
     showPlaceholders: true,
     showResendVerificationEmailLink: false,
@@ -58,8 +58,8 @@ AccountsTemplates.configure({
 
 // Define these routes in a file loaded on both client and server
 AccountsTemplates.configureRoute('signIn', {
-    name: 'signin',
-    path: '/signin'
+    name: 'signIn',
+    path: '/sign-in'
 });
 
 AccountsTemplates.configureRoute('signUp', {
@@ -73,10 +73,10 @@ AccountsTemplates.configureRoute('changePwd', {
     path: '/change-password'
 });
 
-AccountsTemplates.configureRoute('forgotPwd', {
-    name: 'forgotPwd',
-    path: '/forgot-password'
-});
+//AccountsTemplates.configureRoute('forgotPwd', {
+//    name: 'forgotPwd',
+//    path: '/forgot-password'
+//});
 
 AccountsTemplates.configureRoute('resetPwd', {
     name: 'resetPwd',

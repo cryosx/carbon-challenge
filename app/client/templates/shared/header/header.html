@@ -2,12 +2,9 @@
     <div class="navbar-fixed">
         <ul id="dropdown1" class="dropdown-content">
             <li><a class="black-text font-weight-300" href="http://www.soc.hawaii.edu/mora/Team.html">Team</a></li>
-            <li><a class="black-text font-weight-300" href="http://www.soc.hawaii.edu/mora/Publications.html">Publications</a>
-            </li>
-            <li><a class="black-text font-weight-300" href="http://www.soc.hawaii.edu/mora/Courses.html">Courses</a>
-            </li>
-            <li><a class="black-text font-weight-300" href="http://www.soc.hawaii.edu/mora/PressRoom.html">Press</a>
-            </li>
+            <li><a class="black-text font-weight-300" href="http://www.soc.hawaii.edu/mora/Publications.html">Publications</a></li>
+            <li><a class="black-text font-weight-300" href="http://www.soc.hawaii.edu/mora/Courses.html">Courses</a></li>
+            <li><a class="black-text font-weight-300" href="http://www.soc.hawaii.edu/mora/PressRoom.html">Press</a></li>
         </ul>
         <nav class="white" role="navigation">
             <div class="nav-wrapper padding-left-5">
@@ -15,13 +12,13 @@
                 <ul class="right hide-on-med-and-down">
                     <li><a class="black-text font-weight-300" href="http://www.soc.hawaii.edu/mora/">MoraLab Homepage</a></li>
                     <li><a class="black-text font-weight-300" href="http://www.soc.hawaii.edu/mora/del.html">CO2 Neutrality</a></li>
-                    <!--{{#if currentUser}}-->
-                        <!--<li id="log-out-button">{{> atNavButton}}</li>-->
-                    <!--{{else}}-->
-                        <!--<li id="sign-in-button">{{> atNavButton}}</li>-->
-                    <!--{{/if}}-->
                     <li><a class="dropdown-button black-text" href="#!" data-activates="dropdown1">More<i
                             class="material-icons right black-text">arrow_drop_down</i></a></li>
+                    {{#if currentUser}}
+                        <li id="log-out-button">{{> atNavButton}}</li>
+                    {{else}}
+                        <li id="sign-in-button">{{> atNavButton}}</li>
+                    {{/if}}
                 </ul>
 
                 <ul id="nav-mobile" class="side-nav">
@@ -38,11 +35,11 @@
                     <li><a href="http://www.soc.hawaii.edu/mora/PressRoom.html">Press</a></li>
                     <li><a href="http://www.soc.hawaii.edu/mora/Carbon%20Neutrality%20Project">CO2 Neutrality</a></li>
 
-                    <!--{{#if currentUser}}-->
-                        <!--<li id="log-out-button">{{> atNavButton}}</li>-->
-                    <!--{{else}}-->
-                        <!--<li id="sign-in-button">{{> atNavButton}}</li>-->
-                    <!--{{/if}}-->
+                    {{#if currentUser}}
+                        <li id="log-out-button">{{> atNavButton}}</li>
+                    {{else}}
+                        <li id="sign-in-button">{{> atNavButton}}</li>
+                    {{/if}}
                 </ul>
                 <a class="button-collapse" href="#" data-activates="nav-mobile" id="sidebar-button-collapse">
                     <!--<i class="mdi-navigation-menu black-text"></i>-->

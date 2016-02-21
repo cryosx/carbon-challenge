@@ -40,3 +40,5 @@ Location:
 Resolution:
 
     I should consider changeing the default color to white so that I don't have to keep using <black-text>
+
+[3] Had To Directly Alter Materialize's JS to Make Toggling The Hamburger Menu Possible

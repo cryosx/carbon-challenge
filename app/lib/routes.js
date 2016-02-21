@@ -46,6 +46,7 @@ var legal = FlowRouter.group({
 })
 
 legal.route('/privacy', {
+    name: 'privacy',
     action: function () {
         BlazeLayout.render('masterLayout', {
             header: 'header',
@@ -57,6 +58,7 @@ legal.route('/privacy', {
 });
 
 legal.route('/terms-of-use', {
+    name: 'termsOfUse',
     action: function () {
         BlazeLayout.render('masterLayout', {
             header: 'header',
@@ -66,6 +68,15 @@ legal.route('/terms-of-use', {
         })
     }
 });
+
+// the App_notFound template is used for unknown routes and missing lists
+FlowRouter.notFound = {
+    action: function() {
+        BlazeLayout.render('masterLayout', {main: 'loading'});
+    }
+};
+
+
 
 
 // RIGHT NOW I'LL HAVE EVERYTHING RENDER THE MASTER LAYOUT AND THEN PASS IN THE COMPONENTS LIKE THE HEADER, FOOTER, AND
