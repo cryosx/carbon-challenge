@@ -1,0 +1,104 @@
+<template name="services">
+    <div id="services">
+        <div class="row center">
+            <h5>How much do you expend per month?</h5>
+        </div>
+
+        <div class="divider"></div>
+        <br>
+
+        <form id="services-form">
+            <div class="row">
+                <div class="col s12 m6 l3">
+                    <div class="card hoverable medium">
+                        <div class="card-image">
+                            <img src="images/services/health1.jpg">
+                            <span class="card-title"><h3>Health Care</h3></span>
+                        </div>
+                        <div class="card-content">
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <label class="active" for="healthSpentOn">$ Spent on Services</label>
+                                    <input type="number" name="healthSpentOn" id="healthSpentOn" class="validate" min="0" autofocus required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m6 l3">
+                    <div class="card hoverable medium">
+                        <div class="card-image">
+                            <img src="images/services/communications1.jpg">
+                            <span class="card-title"><h3>Communications</h3></span>
+                        </div>
+                        <div class="card-content">
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <label class="active" for="communicationsSpentOn">$ Spent on Services</label>
+                                    <input type="number" name="communicationsSpentOn" id="communicationsSpentOn" class="validate" min="0" required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m6 l3">
+                    <div class="card hoverable medium">
+                        <div class="card-image">
+                            <img src="images/services/vehicles1.jpg">
+                            <span class="card-title"><h3>Vehicle Services</h3></span>
+                        </div>
+                        <div class="card-content">
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <label class="active" for="vehiclesSpentOn">$ Spent on services</label>
+                                    <input type="number" name="vehiclesSpentOn" id="vehiclesSpentOn" class="validate" min="0" required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m6 l3">
+                    <div class="card hoverable medium">
+                        <div class="card-image">
+                            <img src="images/services/maintenance1.jpg">
+                            <span class="card-title"><h3>Home Maintenance</h3></span>
+                        </div>
+                        <div class="card-content">
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <label class="active" for="maintenanceSpentOn">$ Spent on services</label>
+                                    <input type="number" name="maintenanceSpentOn" id="maintenanceSpentOn" class="validate" min="0" required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="card">
+                    <div class="col s12 m6 offset-m3 l4 offset-l4" id="totalCarbonCard">
+                        <div class="card-panel">
+                            <div class="row center">
+                                <h5 class="">Total Services</h5>
+                            </div>
+                            <div class="divider"></div>
+                            <div class="row valign-wrapper" style="position:relative">
+                                <h2 class="col s7 m7 l7 center" id="totalServicesEmissions">{{totalServices}}</h2>
+                                <h6 class="col s5 m5 l5 center valign">tons of CO<sub>2</sub>/Year</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12 m12 l12 center">
+                    <div class="btn-block">
+                        <a class="waves-effect waves-light btn red" id="cancel">Cancel</a>
+                        <input type="submit" class="pageload-link waves-effect waves-light btn next" id="next">
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</template>

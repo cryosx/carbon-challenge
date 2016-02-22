@@ -1,0 +1,66 @@
+/*
+ * Customized MaterializeCSS ...
+ */
+
+.z-depth-1, nav, .card-panel, .card, .toast, .btn, .btn-large, .btn-floating, .dropdown-content, .collapsible, .side-nav {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 4px 0 rgba(0, 0, 0, 0.12);
+}
+
+a#at-nav-button {
+  color: white;
+  border-radius: 100px;
+  background-color: coral;
+}
+
+.parallax-container {
+  position: relative;
+  overflow: hidden;
+  height: 400px;
+  z-index: 1;
+}
+
+.divider {
+  height: 1px;
+  overflow: hidden;
+  background-color: #e0e0e0;
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
+.picker__select--year.browser-default {
+  display: inline;
+  background-color: #FFFFFF;
+  width: 27%;
+}
+
+.picker__box {
+  border-radius: 5px;
+  border-width: 0;
+  overflow: hidden;
+}
+
+
+.picker__day:hover {
+  background-color: #E8E8E8;
+
+}
+
+.picker__day--selected, .picker__day--selected:hover, .picker--focused .picker__day--selected {
+  border-radius: 50%;
+  -webkit-transform: scale(0.9);
+  transform: scale(0.9);
+  background-color: #f44336;
+  color: #ffffff;
+}
+
+.picker__today:hover {
+  background-color: #E8E8E8;
+}
+
+.picker__clear:hover {
+  background-color: #E8E8E8;
+}
+
+.picker__close:hover {
+  background-color: #E8E8E8;
+}

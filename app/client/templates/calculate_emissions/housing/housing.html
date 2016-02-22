@@ -1,0 +1,157 @@
+<template name="housing">
+    <div id="housing">
+
+        <div class="row">
+            <ul class="tabs transportation">
+                <li class="tab col s3">
+                    <a href="#electricity" class="active">
+                        <span><i class="fa fa-plane"></i> Electricity</span>
+                    </a>
+                </li>
+                <li class="tab col s3">
+                    <a href="#naturalGas">
+                        <span><i class="fa fa-home"></i> Natural Gas</span>
+                    </a>
+                </li>
+                <li class="tab col s3">
+                    <a href="#propaneAndOther">
+                        <span><i class="fa fa-cutlery"></i> Propane & Other Fuels</span>
+                    </a>
+                </li>
+                <li class="tab col s3">
+                    <a href="#water">
+                        <span><i class="fa fa-shopping-cart"></i> Water</span>
+                    </a>
+                </li>
+                <!--<li class="tab col s2"><a href="#services"><i class="fa fa-wheelchair"></i> Services</a></li>-->
+            </ul>
+        </div>
+
+        {{> electricity}}
+        {{> naturalGas}}
+        {{> propaneAndOther}}
+        {{> water}}
+
+        <div class="row center">
+            <h5>How much do you use per year?</h5>
+        </div>
+
+        <div class="divider"></div>
+        <br>
+
+        <form id="housing-form">
+            <div class="row">
+                <div class="col s12 m6 l3">
+                    <div class="card hoverable medium">
+                        <div class="card-image">
+                            <img src="images/housing/electricity1.jpg">
+                            <span class="card-title"><h3>Electricity</h3></span>
+                        </div>
+                        <div class="card-content">
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <i class="material-icons prefix">battery_charging_full</i>
+                                    <input type="number" name="electricityUsed" id="electricityUsed"
+                                           class="validate" min="0" max="50000" autofocus required>
+                                    <label class="active" for="electricityUsed">Kilowatt Hours Used In A Year</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m6 l3">
+                    <div class="card hoverable medium">
+                        <div class="card-image">
+                            <img src="images/housing/fuel3.jpg">
+                            <span class="card-title"><h3>Fuel</h3></span>
+                        </div>
+                        <div class="card-content">
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <i class="material-icons prefix">drive_eta</i>
+                                    <label class="active" for="fuelUsed">Gallons Used</label>
+                                    <input type="number" name="fuelUsed" id="fuelUsed" min="0" max="50000" required>
+                                </div>
+                            </div>
+                            <div class="row">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m6 l3">
+                    <div class="card hoverable medium">
+                        <div class="card-image">
+                            <img src="images/housing/gas1.jpg">
+                            <span class="card-title"><h3>Gas</h3></span>
+                        </div>
+                        <div class="card-content">
+                            <div class="row">
+                                <div class="input-field col s7">
+                                    <i class="material-icons prefix">home</i>
+                                    <input type="number" name="gasUsed" id="gasUsed" min="0" max="50000" required>
+                                    <label class="active" for="gasUsed">Cubic Feet Used</label>
+                                </div>
+                                <div class="input-field col s5">
+                                    <select id="gasUnits">
+                                        <option value="cubicFeet" selected="selected">Cubic Feet</option>
+                                        <option value="btu" selected="selected">BTU</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m6 l3">
+                    <div class="card hoverable medium">
+                        <div class="card-image">
+                            <img src="images/housing/water1.jpg">
+                            <span class="card-title"><h3>Water</h3></span>
+                        </div>
+                        <div class="card-content">
+
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <i class="fa fa-tint prefix"></i>
+                                    <input type="number" name="waterUsed" id="waterUsed" min="0" max="50000" required>
+                                    <label class="active" for="waterUsed">Gallons Used</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--<div class="row">-->
+                <!--<div class="card">-->
+                    <!--<div class="col s12 m6 offset-m3 l4 offset-l4" id="totalCarbonCard">-->
+                        <!--<div class="card-panel">-->
+                            <!--<div class="row center">-->
+                                <!--<h5 class="">Total Housing</h5>-->
+                            <!--</div>-->
+                            <!--<div class="divider"></div>-->
+                            <!--<div class="row valign-wrapper" style="position:relative">-->
+                                <!--<h2 class="col s7 m7 l7 center" id="totalHousingEmissions">{{totalHousing}}</h2>-->
+                                <!--<h6 class="col s5 m5 l5 center valign">tons of CO<sub>2</sub>/Year</h6>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <div class="row">
+                <div class="com s12 m12 l12 center">
+                    <div class="btn-block">
+                        <a class="waves-effect waves-light btn red" id="cancel">Cancel</a>
+                        <input type="submit" class="waves-effect waves-light btn next" id="next" value="Next">
+                    </div>
+                </div>
+            </div>
+        </form>
+
+    </div>
+
+</template>

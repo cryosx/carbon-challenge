@@ -1,0 +1,77 @@
+<template name="transportation">
+    <div id="transportation">
+        <div class="row">
+            <ul class="tabs transportation">
+                <li class="tab col s2">
+                    <a href="#car" class="active">
+                        <span><i class="fa fa-plane"></i> Car</span>
+                    </a>
+                </li>
+                <li class="tab col s2">
+                    <a href="#motorcycle">
+                        <span><i class="fa fa-home"></i> Motorcycle</span>
+                    </a>
+                </li>
+                <li class="tab col s2">
+                    <a href="#bus">
+                        <span><i class="fa fa-cutlery"></i> Bus</span>
+                    </a>
+                </li>
+                <li class="tab col s2">
+                    <a href="#rail">
+                        <span><i class="fa fa-shopping-cart"></i> Rail</span>
+                    </a>
+                </li>
+                <li class="tab col s2">
+                    <a href="#flying">
+                        <span><i class="fa fa-shopping-cart"></i> Flying</span>
+                    </a>
+                </li>
+                <!--<li class="tab col s2"><a href="#services"><i class="fa fa-wheelchair"></i> Services</a></li>-->
+            </ul>
+        </div>
+
+        {{> car}}
+        {{> motorcycle}}
+        {{> bus}}
+        {{> rail}}
+        {{> flying}}
+
+        <!-- Modal Structure -->
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <h4>Before you begin</h4>
+
+                <div class="divider"></div>
+                <ol>
+                    <li>Please gather copies of an electricity, gas, and water bill.</li>
+                    <br>
+                    <li>You will also need a copy of your latest vehicle inspection and/or oil change.</li>
+                    <br>
+                    <li>Select the units you will be using</li>
+                </ol>
+                <div class="row input-field">
+                    <select id="units" class="col s6 offset-s3">
+                        <option value="miles" selected="selected">Miles</option>
+                        <option value="kilometers">Kilometers</option>
+                    </select>
+                    <!--<label>Select Your Units</label>-->
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Start</a>
+            </div>
+        </div>
+
+        <form id="transportation-form">
+            <div class="row">
+                <div class="col s12 m12 l12 center">
+                    <div class="btn-block">
+                        <a class="waves-effect waves-light btn red cancel" id="cancel">Cancel</a>
+                        <input type="submit" class="waves-effect waves-light btn next" id="next" value="Next">
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</template>

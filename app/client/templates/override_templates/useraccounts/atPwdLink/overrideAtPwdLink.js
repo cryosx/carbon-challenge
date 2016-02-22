@@ -1,0 +1,1 @@
+Template['overrideAtPwdLink'].replaces('atPwdLink');

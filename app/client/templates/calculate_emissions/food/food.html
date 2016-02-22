@@ -1,0 +1,174 @@
+<template name="food">
+    <div id="food">
+        <div class="row center">
+            <h5>How much do you eat per week?</h5>
+        </div>
+
+        <div class="divider"></div>
+        <br>
+
+        <form id="food-form">
+            <div class="row">
+                <div class="col s12 m6 l4">
+                    <div class="card hoverable medium">
+                        <div class="card-image">
+                            <img src="images/food/meat1.jpg">
+                            <span class="card-title"><h3>Beef, Pork, Lamb, & Veal</h3></span>
+                        </div>
+                        <div class="card-content">
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <i class="material-icons prefix">local_dining</i>
+                                    <input type="number" name="meatConsumed" id="meatConsumed" min="0" max="10000" autofocus required>
+                                    <label class="active" for="meatConsumed">Calories Consumed</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m6 l4">
+                    <div class="card hoverable medium">
+                        <div class="card-image">
+                            <img src="images/food/poultry1.jpg">
+                            <span class="card-title"><h3>Poultry & Eggs</h3></span>
+                        </div>
+                        <div class="card-content">
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <i class="material-icons prefix">local_dining</i>
+                                    <input type="number" name="poultryConsumed" id="poultryConsumed" min="0" max="10000" required>
+                                    <label class="active" for="poultryConsumed">Calories Consumed</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m12 l4">
+                    <div class="card hoverable medium">
+                        <div class="card-image">
+                            <img src="images/food/seafood1.jpg">
+                            <span class="card-title"><h3>Fish & Seafood</h3></span>
+                        </div>
+                        <div class="card-content">
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <i class="material-icons prefix">local_dining</i>
+                                    <input type="number" name="seafoodConsumed" id="seafoodConsumed" min="0" max="10000" required>
+                                    <label class="active" for="seafoodConsumed">Calories Consumed</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12 m6 l4">
+                    <div class="card hoverable medium">
+                        <div class="card-image">
+                            <img src="images/food/milk1.jpg">
+                            <span class="card-title"><h3>Dairy</h3></span>
+                        </div>
+                        <div class="card-content">
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <i class="material-icons prefix">local_drink</i>
+                                    <input type="number" name="dairyConsumed" id="dairyConsumed" min="0" max="10000" required>
+                                    <label class="active" for="dairyConsumed">Calories Consumed</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m6 l4">
+                    <div class="card hoverable medium">
+                        <div class="card-image">
+                            <img src="images/food/vegetables1.jpg">
+                            <span class="card-title"><h3>Fruits & Vegetables</h3></span>
+                        </div>
+                        <div class="card-content">
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <i class="material-icons prefix">local_dining</i>
+                                    <input type="number" name="vegetablesConsumed" id="vegetablesConsumed" min="0" max="10000" required>
+                                    <label class="active" for="vegetablesConsumed">Calories Consumed</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m12 l4">
+                    <div class="card hoverable medium">
+                        <div class="card-image">
+                            <img src="images/food/grains1.jpg">
+                            <span class="card-title"><h3>Grains & Baked Goods</h3></span>
+                        </div>
+                        <div class="card-content">
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <i class="material-icons prefix">local_dining</i>
+                                    <label class="active" for="grainsConsumed">Calories Consumed</label>
+                                    <input type="number" name="grainsConsumed" id="grainsConsumed" min="0" max="10000" required>
+                                </div>
+                            </div>
+                            <div class="row">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m12 l12">
+                    <div class="card hoverable medium">
+                        <div class="card-image">
+                            <img src="images/food/drinks1.jpg">
+                            <span class="card-title"><h3>Drinks</h3></span>
+                        </div>
+                        <div class="card-content">
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <i class="material-icons prefix">local_cafe</i>
+                                    <label class="active" for="drinksConsumed">Calories Consumed</label>
+                                    <input type="number" name="drinksConsumed" id="drinksConsumed" min="0" max="10000" required>
+                                </div>
+                            </div>
+                            <div class="row">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="card">
+                    <div class="col s12 m6 offset-m3 l4 offset-l4" id="totalCarbonCard">
+                        <div class="card-panel">
+                            <div class="row center">
+                                <h5 class="">Total Food</h5>
+                            </div>
+                            <div class="divider"></div>
+                            <div class="row valign-wrapper" style="position:relative">
+                                <h2 class="col s7 m7 l7 center" id="totalFoodEmissions">{{totalFood}}</h2>
+                                <h6 class="col s5 m5 l5 center valign">tons of CO<sub>2</sub>/Year</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12 m12 l12 center">
+                    <div class="btn-block">
+                        <a class="waves-effect waves-light btn red" id="cancel">Cancel</a>
+                        <input type="submit" class="waves-effect waves-light btn next" id="next" value="Next">
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</template>

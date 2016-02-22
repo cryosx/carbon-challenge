@@ -30,8 +30,14 @@ var emissions = FlowRouter.group({
 // http://app.com/documents
 emissions.route('/', {
     action: function () {
-        console.log("We're viewing a list of documents.");
-    }
+        BlazeLayout.render('masterLayout', {
+            header: 'header',
+            //sidebar: 'loading',
+            main: 'emissions',
+            footer: 'footer'
+        });
+    },
+    name: 'emissions-start'
 });
 
 // http://app.com/documents/:carbonFactor
@@ -72,7 +78,7 @@ legal.route('/terms-of-use', {
 // the App_notFound template is used for unknown routes and missing lists
 FlowRouter.notFound = {
     action: function() {
-        BlazeLayout.render('masterLayout', {main: 'loading'});
+        BlazeLayout.render('masterLayout', {main: 'notFound'});
     }
 };
 

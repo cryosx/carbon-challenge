@@ -15,15 +15,15 @@ AccountsTemplates.configure({
     forbidClientAccountCreation: false,
     lowercaseUsername: false,
     overrideLoginErrors: true,
-    sendVerificationEmail: false,
+    sendVerificationEmail: true,
     socialLoginStyle: "popup",
 
     // Appearance
     showAddRemoveServices: true,
-    showForgotPasswordLink: false,
+    showForgotPasswordLink: true,
     showLabels: true,
     showPlaceholders: true,
-    showResendVerificationEmailLink: false,
+    showResendVerificationEmailLink: true,
 
     // Client-side Validation
     continuousValidation: false,
@@ -38,7 +38,7 @@ AccountsTemplates.configure({
     termsUrl: '/legal/terms-of-use',
 
     // Redirects
-    homeRoutePath: '/home',
+    homeRoutePath: '/',
     redirectTimeout: 4000,
 
     // Texts
@@ -51,7 +51,8 @@ AccountsTemplates.configure({
             "meteor-developer": "fa fa-rocket"
         },
         title: {
-            forgotPwd: "Recover Your Password"
+            forgotPwd: "Recover Your Password",
+            resendVerificationEmail: "Resend the Verification Email"
         }
     }
 });
@@ -73,12 +74,18 @@ AccountsTemplates.configureRoute('changePwd', {
     path: '/change-password'
 });
 
-//AccountsTemplates.configureRoute('forgotPwd', {
-//    name: 'forgotPwd',
-//    path: '/forgot-password'
-//});
+AccountsTemplates.configureRoute('forgotPwd', {
+    name: 'forgotPwd',
+    path: '/forgot-password'
+});
 
 AccountsTemplates.configureRoute('resetPwd', {
     name: 'resetPwd',
     path: '/reset-password'
+});
+
+
+AccountsTemplates.configureRoute('resendVerificationEmail', {
+    name: 'resendVerificationEmail',
+    path: '/send-again'
 });

@@ -45,3 +45,8 @@ materialize-mod
 tomwasd:flow-router-autoscroll
 momentum-flow-router-mod
 webtempest:disqus
+service-configuration
+email
+cottz:flow-router-auth
+meteorhacks:fast-render
+meteorhacks:subs-manager

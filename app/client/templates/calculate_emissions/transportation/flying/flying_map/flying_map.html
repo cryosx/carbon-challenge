@@ -1,0 +1,66 @@
+<template name="flyingMap">
+    <div class="row">
+        <span class="font-size-x-large">You produce <span class="deep-orange-text">{{totalCarbon}}</span> tons of CO<sub>2</sub> from taking the train <span class="deep-orange-text">{{totalDistance}} {{units}}</span> a year.</span>
+    </div>
+    <div class="row">
+        <div id="flying-map-container" class="col s12 m7 l7 push-m5 push-l5 no-padding valign-wrapper">
+            <div class="flying-map z-depth-1 valign">
+                {{> googleMap name="flyingMap" options=flyingMapOptions}}
+            </div>
+        </div>
+        <div class="col s12 m5 l5 pull-m7 pull-l7">
+            <form>
+                <div id="flying-input-block-1" class="row">
+                    <h4 class="center-align">Enter Route</h4>
+                    <input id="flying-input-origin" class="col s10 offset-s1" type="text" placeholder="Starting point" required>
+                    <input id="flying-input-destination" class="col s10 offset-s1" type="text" placeholder="Destination" required>
+                    <button id="flying-submit" class="btn waves-effect waves-light col s4 offset-s4 tooltipped" data-position="bottom" data-delay="50" data-tooltip="The route displayed does not need to be your exact route." type="submit" name="action">Find Route</button>
+                </div>
+                <div id="flying-input-block-2" class="row square-border flying-input-frequency">
+                    <div class="row input-field valign-wrapper">
+                        <span class="col s4 valign truncate">I make this trip</span>
+                        <input id="flying-input-frequency" type="number" class="col s2 m2 l2 validate valign no-margin" min="1" value="1">
+                        <span class="col s3 m3 l3 center no-padding valign">time(s) a </span>
+                        <div  class="input-field col s3 valign">
+                            <select id="flying-input-timespan">
+                                <option value="week" selected="selected">Week</option>
+                                <option value="month">Month</option>
+                                <option value="year">Year</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row valign-wrapper">
+                        <span class="col s9 center no-padding valign">Is this flight a round trip? </span>
+                        <div class="input-field col s3 valign">
+                            <select id="flying-input-roundtrip" >
+                                <option value="no" selected="selected">No</option>.
+                                <option value="yes">Yes</option>.
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <button id="add-flying-route" class="btn waves-effect waves-light col s4 offset-s4" type="submit" name="action">Add Route</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div id="flying-routes" class="row">
+        <ul class="collection with-header hoverable no-margin">
+            {{#each flyingRoutes}}
+                {{> flyingRoute}}
+            {{/each}}
+        </ul>
+    </div>
+    <span id="flying-route-distance-label" class="controls col s4 m5 l3">Route Distance</span>
+</template>
+
+<template name="flyingRoute">
+    <li class="collection-item">
+        <div>
+            Going from {{origin}} to {{destination}} by flying {{#if once}}{{frequencyText}}{{else}}{{frequency}} {{frequencyText}}{{/if}} a {{timespan}} will be {{shortDistance}} {{units}} in a year.
+            <!--{{_id}}-->
+            <i class="secondary-content red-icon material-icons tooltipped remove" data-position="top" data-delay="50" data-tooltip="Remove route">remove</i>
+        </div>
+    </li>
+</template>

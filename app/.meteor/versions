@@ -30,8 +30,10 @@ caching-html-compiler@1.0.2
 callback-hook@1.0.4
 cfs:http-methods@0.0.30
 check@1.1.0
+chuangbo:cookie@1.1.0
 coffeescript@1.0.11
 cosmos:browserify@0.9.3
+cottz:flow-router-auth@0.0.9
 dandv:caret-position@2.1.1
 dburles:google-maps@1.1.5
 ddp@1.2.2
@@ -69,6 +71,10 @@ materialize-mod@0.97.5
 mdg:validation-error@0.2.0
 meteor@1.1.10
 meteor-base@1.0.1
+meteorhacks:fast-render@2.12.0
+meteorhacks:inject-data@2.0.0
+meteorhacks:picker@1.0.3
+meteorhacks:subs-manager@1.6.3
 meteorspark:util@0.2.0
 minifiers@1.1.7
 minimongo@1.0.10

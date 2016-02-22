@@ -1,0 +1,90 @@
+<template name="rail">
+    <div id="rail">
+        <div class="card">
+            <div class="card-content">
+                {{> railMap}}
+            </div>
+        </div>
+        <!--<div class="card hoverable">-->
+            <!--<div class="card-image">-->
+                <!--&lt;!&ndash;<img src="images/transportation/rail2.png">&ndash;&gt;-->
+                <!--&lt;!&ndash;<span class="card-title"><h3>Train - Rail - Subway</h3></span>&ndash;&gt;-->
+            <!--</div>-->
+            <!--<div class="card-content">-->
+                <!--<div class="row valign-wrapper">-->
+                    <!--<div class="input-field col s6 m8 l6">-->
+                        <!--<i class="material-icons prefix">directions_transit</i>-->
+                        <!--<input type="number" name="railDistanceTraveled" id="railDistanceTraveled" class="validate" min="0" required>-->
+                        <!--<label>Miles per Year</label>-->
+                    <!--</div>-->
+                    <!--<div class="col s0 m0 l2 hide-on-med-and-down valign">-->
+                        <!--<h6>{{units}}</h6>-->
+                    <!--</div>-->
+                    <!--<div class="input-field col s6 m4 l4 valign">-->
+                        <!--<input type="checkbox" id="railDistanceTraveledCheckbox"/>-->
+                        <!--<label for="railDistanceTraveledCheckbox">Calculate it</label>-->
+                    <!--</div>-->
+                <!--</div>-->
+
+                <!--<div class="row">-->
+                    <!--<ul class="collapsible no-shadow" id="railDistanceTraveledCalculate" data-collapsible="expandable">-->
+                        <!--<li>-->
+                            <!--<div class="collapsible-body padding" id="railDistanceCollapse">-->
+                                <!--<div class="row">-->
+                                    <!--&nbsp;-->
+                                <!--</div>-->
+                                <!--<div class="row valign-wrapper">-->
+                                    <!--<div class="input-field col s8 m8 l6">-->
+                                        <!--<i class="material-icons prefix">directions_rail</i>-->
+                                        <!--<input type="number" name="railMileageLastCheck" id="railMileageLastCheck" min="0" required>-->
+                                        <!--<label>Mileage At Last Checkup</label>-->
+                                    <!--</div>-->
+                                    <!--<div class="col s0 m0 l2 hide-on-med-and-down valign">-->
+                                        <!--<h6>{{units}}</h6>-->
+                                    <!--</div>-->
+                                    <!--<div class="input-field col s4 m4 l4 ">-->
+                                        <!--<input type="checkbox" id="railMapCheckbox"/>-->
+                                        <!--<label for="railMapCheckbox">Find Distance</label>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+
+                                <!--<div class="row">-->
+                                    <!--<ul class="collapsible no-shadow" id="railMapContainer" data-collapsible="expandable">-->
+                                        <!--<li>-->
+                                            <!--<div class="collapsible-body" id="railMapCollapse">-->
+                                                <!--&lt;!&ndash;{{> railMap}}&ndash;&gt;-->
+                                            <!--</div>-->
+                                        <!--</li>-->
+                                    <!--</ul>-->
+                                <!--</div>-->
+
+                                <!--<div class="row valign-wrapper center-align">-->
+                                    <!--<div class="col s3 offset-m1">-->
+                                        <!--<h6>I make this trip</h6>-->
+                                    <!--</div>-->
+
+                                    <!--<div class="input-field col s2 center-align">-->
+                                        <!--<input type="number" name="railRouteFrequencyInput" id="railRouteFrequencyInput" min="0" required>-->
+                                    <!--</div>-->
+                                    <!--<div class="col s3 m2 l2 center-align">-->
+                                        <!--<h6>times per</h6>-->
+                                    <!--</div>-->
+                                    <!--<div class="input-field col s2">-->
+                                        <!--<select id="railRouteFrequency">-->
+                                            <!--<option value="week" selected="selected">week</option>-->
+                                            <!--<option value="month">month</option>-->
+                                            <!--<option value="year">year</option>-->
+                                        <!--</select>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</li>-->
+                    <!--</ul>-->
+                <!--</div>-->
+                <!--<div class="row unit-label">-->
+                    <!--{{units}}-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    </div>
+</template>

@@ -1,0 +1,30 @@
+<template name="emissionsNav">
+    <div class="emissions-nav z-depth-1">
+        <div class="row">
+            <ul class="tabs">
+                <li class="tab col s3">
+                    <a href="#transportation" class="active">
+                        <span><i class="fa fa-plane"></i> Transportation</span>
+                        {{totalTransportationCarbon}}
+                    </a>
+                </li>
+                <li class="tab col s3">
+                    <a href="#housing">
+                        <span><i class="fa fa-home"></i>Housing</span>
+                    </a>
+                </li>
+                <li class="tab col s3">
+                    <a href="#food">
+                        <span><i class="fa fa-cutlery"></i> Food</span>
+                    </a>
+                </li>
+                <li class="tab col s3">
+                    <a href="#recycling">
+                        <span><i class="fa fa-shopping-cart"></i> Recycling</span>
+                    </a>
+                </li>
+                <!--<li class="tab col s2"><a href="#services"><i class="fa fa-wheelchair"></i> Services</a></li>-->
+            </ul>
+        </div>
+    </div>
+</template>

@@ -1,0 +1,161 @@
+<template name="goods">
+    <div id="goods">
+        <div class="row center">
+            <h5>How much do you expend per month?</h5>
+        </div>
+
+        <div class="divider"></div>
+        <br>
+
+        <form id="goods-form">
+            <div class="row">
+                <div class="col s12 m4 l4">
+                    <div class="card hoverable medium">
+                        <div class="card-image">
+                            <img src="images/goods/clothes1.jpg">
+                            <span class="card-title"><h3>Clothing</h3></span>
+                        </div>
+                        <div class="card-content">
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <i class="material-icons prefix">home</i>
+                                    <input type="number" name="clothesSpentOn" id="clothesSpentOn" class="validate" min="0" autofocus required>
+                                    <label class="active" for="clothesSpentOn">$ Spent on Goods</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m4 l4">
+                    <div class="card hoverable medium">
+                        <div class="card-image">
+                            <img src="images/goods/furniture2.jpg">
+                            <span class="card-title"><h3>Furniture & Appliances</h3></span>
+                        </div>
+                        <div class="card-content">
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <i class="material-icons prefix">home</i>
+                                    <input type="number" name="furnitureSpentOn" id="furnitureSpentOn" class="validate" min="0" required>
+                                    <label class="active" for="furnitureSpentOn">$ Spent on Goods</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m4 l4">
+                    <div class="card hoverable medium">
+                        <div class="card-image">
+                            <img src="images/goods/entertainment1.jpg">
+                            <span class="card-title"><h3>Entertainment</h3></span>
+                        </div>
+                        <div class="card-content">
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <i class="material-icons prefix">home</i>
+                                    <input type="number" name="entertainmentSpentOn" id="entertainmentSpentOn" class="validate" min="0" required>
+                                    <label class="active" for="entertainmentSpentOn">$ Spent on Goods</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12 m6 l3">
+                    <div class="card hoverable large">
+                        <div class="card-image">
+                            <img src="images/goods/paper1.jpg">
+                            <span class="card-title"><h3>Paper & Reading</h3></span>
+                        </div>
+                        <div class="card-content">
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <i class="material-icons prefix">home</i>
+                                    <input type="number" name="paperSpentOn" id="paperSpentOn" class="validate" min="0" required>
+                                    <label class="active" for="paperSpentOn">$ Spent on Goods</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m6 l3">
+                    <div class="card hoverable large">
+                        <div class="card-image">
+                            <img src="images/goods/cleaning1.jpg">
+                            <span class="card-title"><h3>Health Care & Cleaning</h3></span>
+                        </div>
+                        <div class="card-content">
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <i class="material-icons prefix">home</i>
+                                    <input type="number" name="cleaningSpentOn" id="cleaningSpentOn" class="validate" min="0" required>
+                                    <label class="active" for="cleaningSpentOn">$ Spent on Goods</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m6 l3">
+                    <div class="card hoverable large">
+                        <div class="card-image">
+                            <img src="images/goods/vehicles1.jpg">
+                            <span class="card-title"><h3>Auto Parts</h3></span>
+                        </div>
+                        <div class="card-content">
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <i class="material-icons prefix">home</i>
+                                    <input type="number" name="autoSpentOn" id="autoSpentOn" class="validate" min="0" required>
+                                    <label class="active" for="autoSpentOn">$ Spent on Goods</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m6 l3">
+                    <div class="card hoverable medium">
+                        <div class="card-image">
+                            <img src="images/goods/medical1.jpg">
+                            <span class="card-title"><h3>Medical</h3></span>
+                        </div>
+                        <div class="card-content">
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <i class="material-icons prefix">home</i>
+                                    <input type="number" name="medicalSpentOn" id="medicalSpentOn" class="validate" min="0" required>
+                                    <label class="active" for="medicalSpentOn">$ Spent on Goods</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="card">
+                    <div class="col s12 m6 offset-m3 l4 offset-l4" id="totalCarbonCard">
+                        <div class="card-panel">
+                            <div class="row center">
+                                <h5 class="">Total Goods</h5>
+                            </div>
+                            <div class="divider"></div>
+                            <div class="row valign-wrapper" style="position:relative">
+                                <h2 class="col s7 m7 l7 center" id="totalGoodsEmissions">{{totalGoods}}</h2>
+                                <h6 class="col s5 m5 l5 center valign">tons of CO<sub>2</sub>/Year</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12 m12 l12 center">
+                    <div class="btn-block">
+                        <a class="waves-effect waves-light btn red cancel" id="cancel">Cancel</a>
+                        <input type="submit" class="waves-effect waves-light btn next" id="next" value="Next">
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</template>

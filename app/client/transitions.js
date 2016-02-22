@@ -1,4 +1,4 @@
-var NamedRoutes = [ 'home','signIn','signUp','privacy', 'termsOfUse'];
+var NamedRoutes = [ 'home','signIn','signUp','privacy', 'termsOfUse', 'resendVerificationEmail'];
 
 // Modified momentum-flow-router so I change the transition effect more easily.
 Transitioner.TransitionOrder(NamedRoutes,'fade', 'fade');

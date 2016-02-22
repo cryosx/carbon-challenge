@@ -1,0 +1,89 @@
+<template name="motorcycle">
+    <div id="motorcycle">
+        <div class="card">
+            <div class="card-image">
+                <!--<img src="images/transportation/motorcycle1.png">-->
+                <!--<span class="card-title"><h3>Motorcyle</h3></span>-->
+            </div>
+            <div class="card-content">
+                <div class="row">
+                    <span class="font-size-x-large">You produce <span class="deep-orange-text">{{totalCarbon}}</span> tons of CO<sub>2</sub> from driving <span class="deep-orange-text">{{totalDistance}} {{units}}</span> a year.</span>
+                </div>
+                <div class="row valign-wrapper">
+                    <div class="input-field col s8 m8 l6">
+                        <i class="material-icons prefix">directions_bike</i>
+                        <input type="number" name="motorcycleDistanceTraveled" id="motorcycleDistanceTraveled" class="validate" min="0" required>
+                        <label  class="active">Miles per Year</label>
+                    </div>
+                    <div class="col s0 m0 l2 hide-on-med-and-down valign">
+                        <h6 style="text-transform:capitalize">{{units}}</h6>
+                    </div>
+                    <div class="input-field col s4 m4 l4 valign">
+                        <input type="checkbox" id="motorcycleCheckbox"/>
+                        <label for="motorcycleCheckbox">Calculate it</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <ul class="collapsible no-shadow" id="motorcycleDistanceTraveledCalculate" data-collapsible="expandable">
+                        <li>
+                            <div class="collapsible-body" id="motorcycleDistanceCollapse">
+                                <div class="row">
+                                    &nbsp;
+                                </div>
+                                <div class="row valign-wrapper">
+                                    <div class="input-field col s5 m5 l5">
+                                        <i class="material-icons prefix">directions_bike</i>
+                                        <input type="number" name="motorcycleMileageLastCheck" id="motorcycleMileageLastCheck" min="0" required>
+                                        <label class="hide-on-med-and-down">Mileage At Last Checkup</label>
+                                    </div>
+                                    <div class="col s2 m2 l2 valign">
+                                        <h6 style="text-transform:capitalize">{{units}}</h6>
+                                    </div>
+                                    <div class="input-field col s5 m4 l4">
+                                        <i class="material-icons prefix">date_range</i>
+                                        <input type="date" id="motorcycleDateLastCheck"/>
+                                    </div>
+                                    <div class="col s1 m1 l1 valign">
+                                        <h6>Date</h6>
+                                    </div>
+                                </div>
+                                <div class="row valign-wrapper">
+                                    <div class="input-field col s5 m5 l5">
+                                        <i class="material-icons prefix">directions_bike</i>
+                                        <input type="number" name="motorcycleCurrentMileage" id="motorcycleCurrentMileage" min="0" required>
+                                        <label class="hide-on-med-and-down">Current Mileage</label>
+                                    </div>
+                                    <div class="col s2 m2 l2 valign">
+                                        <h6 style="text-transform:capitalize">{{units}}</h6>
+                                    </div>
+                                    <div class="input-field col s5 m4 l4">
+                                        <i class="material-icons prefix">date_range</i>
+                                        <input type="date" id="motorcycleCurrentDate"/>
+                                    </div>
+                                    <div class="col s1 m1 l1 valign">
+                                        <h6>Date</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="row valign-wrapper">
+                    <div class="input-field col s11 m5 offset-m3">
+                        &nbsp;
+                        <select id="motorcycleCC" class="">
+                            <option value="" disabled selected>Select a CC</option>
+                            <option value="less">less than 125</option>
+                            <option value="between">between 125 and 500</option>
+                            <option value="greater">greater than 500</option>
+                        </select>
+                        <label>What is the CC of your Motorcycle?</label>
+                    </div>
+                    <div class="col s1 m1 valign" style="margin-left: 0">
+                        <h5 >cc</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

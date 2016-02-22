@@ -1,1 +1,1 @@
-FlowRouterAutoscroll.animationDuration = 100;
+FlowRouterAutoscroll.animationDuration = 0;
