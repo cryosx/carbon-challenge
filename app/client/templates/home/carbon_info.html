@@ -1,0 +1,20 @@
+<template name="carbonInfo">
+    <div class="">
+
+        <div class="row">
+
+            <p>
+                A goal in putting this together is for the HTML to be very simple and descriptive. This is the skeleton of what you need:
+                I then set up a media query to handle the header and navigation at mobile resolutions. When setting up your mobile navigation, it's
+                important to be thoughtful about which devices you include. I don't believe in serving mobile navigation (or mobile sites) to iPad
+                users. Since the release of the device, users have expected the ability to navigate "full" websites. Directly clicking menu items is
+                preferable to opening a menu and then clicking an item when space allows it. The next important cutoff are 7" Android tablets which
+                generally fall at 600px. I try to serve these desktop sites whenever possible as well.
+                To set up the mobile navigation, I first code it as if it had already been opened. I then worry about toggling its state later. To illustrate this, I put the "transition" code separately at the bottom.:
+                A nice feature of having the click event on the entire #nav block instead of just the button is that when you click a link, the nav
+                will close while the next page loads, making it seem more fluid.
+            </p>
+        </div>
+    </div>
+
+</template>

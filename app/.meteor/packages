@@ -40,7 +40,8 @@ zimme:active-route
 useraccounts:flow-routing
 arillo:flow-router-helpers
 tap:i18n
-philippspo:momentum-flow-router
 percolate:momentum
 materialize-mod
 tomwasd:flow-router-autoscroll
+momentum-flow-router-mod
+webtempest:disqus

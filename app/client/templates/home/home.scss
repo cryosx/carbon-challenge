@@ -1,0 +1,14 @@
+@media screen and (min-width: 600px) {
+  .home-content {
+    padding-left: 7%;
+    padding-right: 7%;
+
+  }
+}
+@media screen and (max-width: 600px) {
+  .home-content {
+    padding-left: 0%;
+    padding-right: 0%;
+
+  }
+}

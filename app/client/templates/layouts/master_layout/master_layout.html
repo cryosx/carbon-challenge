@@ -1,6 +1,8 @@
 <template name="masterLayout">
 {{#if Template.subscriptionsReady}}
     {{#momentum plugin="flow-router"}}
+        <!--momentum-flow-router needs the {{> Template.dynamic...}} to be DIRECTLY underneath {{momentum...}} to work-->
+
         {{> Template.dynamic template=header}}
         {{> Template.dynamic template=main}}
         {{> Template.dynamic template=footer}}

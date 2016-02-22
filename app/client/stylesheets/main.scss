@@ -12,6 +12,14 @@
   padding-left: 5%;
 }
 
+.padding-7 {
+  padding-left: 7%;
+  padding-right: 7%;
+}
+
+.no-adding {
+  padding:0;
+}
 /*
  * CUSTOMIZED MATERIALIZECSS
  */
@@ -24,4 +32,19 @@ a#at-nav-button {
   color: white;
   border-radius: 100px;
   background-color: coral;
+}
+
+.parallax-container {
+  position: relative;
+  overflow: hidden;
+  height: 400px;
+  z-index: 1;
+}
+
+.divider {
+  height: 1px;
+  overflow: hidden;
+  background-color: #e0e0e0;
+  margin-top: 32px;
+  margin-bottom: 32px;
 }
