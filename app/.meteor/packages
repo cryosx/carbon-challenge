@@ -41,7 +41,6 @@ useraccounts:flow-routing
 arillo:flow-router-helpers
 tap:i18n
 percolate:momentum
-materialize-mod
 tomwasd:flow-router-autoscroll
 momentum-flow-router-mod
 webtempest:disqus
@@ -50,3 +49,5 @@ email
 cottz:flow-router-auth
 meteorhacks:fast-render
 meteorhacks:subs-manager
+reactive-var
+materialize-mod

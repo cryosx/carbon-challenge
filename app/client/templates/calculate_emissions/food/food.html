@@ -1,5 +1,130 @@
 <template name="food">
     <div id="food">
+        <form>
+            <div class="card">
+                <div class="card-image">
+                    <!--<img src="images/transportation/car3.png">-->
+                    <!--<span class="card-title"><h3>Car</h3></span>-->
+                </div>
+                <div class="card-content">
+                    <div class="row">
+                        <span class="font-size-x-large">You produce <span class="deep-orange-text">{{totalCarbon}}</span> tons of CO<sub>2</sub> from driving <span class="deep-orange-text">{{totalDistance}} {{units}}</span> a year.</span>
+                    </div>
+                    <div class="row valign-wrapper">
+                        <div class="input-field col s8 m8 l6">
+                            <i class="material-icons prefix">directions_car</i>
+                            <input type="number" name="carDistanceTraveled" id="carDistanceTraveled" min="0" required>
+                            <label class="active">Miles per Year</label>
+                        </div>
+                        <div class="col s0 m0 l2 valign">
+                            <h6 style="text-transform: capitalize">{{units}}</h6>
+                        </div>
+                        <div class="input-field col s4 m4 l4 valign">
+                            <input type="checkbox" id="carDistanceTraveledCheckbox"/>
+                            <label for="carDistanceTraveledCheckbox">Calculate it</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <ul class="collapsible no-shadow" id="carDistanceTraveledCalculate" data-collapsible="expandable">
+                            <li>
+                                <div class="collapsible-body" id="carDistanceCollapse">
+                                    <div class="row valign-wrapper">
+                                        <div>
+                                            &nbsp;
+                                        </div>
+                                        <div class="input-field col s10 m5 l5">
+                                            <i class="material-icons prefix">directions_car</i>
+                                            <input  id="carMileageLastCheck" type="number" name="carMileageLastCheck" min="0" required>
+                                            <label class="active hide-on-small-only">Mileage At Last Checkup</label>
+                                        </div>
+                                        <div class="col s2 m2 l2 valign">
+                                            <h6 style="text-transform: capitalize">{{units}}</h6>
+                                        </div>
+                                        <div class="input-field col s10 m4 l4">
+                                            <i class="material-icons prefix">date_range</i>
+                                            <input id="carDateLastCheck" type="date" class="datepicker"/>
+                                        </div>
+                                        <div class="col s2 m1 l1 valign">
+                                            <h6>Date</h6>
+                                        </div>
+                                    </div>
+                                    <div class="row valign-wrapper">
+                                        <div class="input-field col s10 m5 l5">
+                                            <i class="material-icons prefix">directions_car</i>
+                                            <input type="number" name="carCurrentMileage" id="carCurrentMileage" min="0" required>
+                                            <label class="active hide-on-small-only">Current Mileage</label>
+                                        </div>
+                                        <div class="col s2 m2 l2  valign">
+                                            <h6 style="text-transform: capitalize">{{units}}</h6>
+                                        </div>
+                                        <div class="input-field col s10 m4 l4">
+                                            <i class="material-icons prefix">date_range</i>
+                                            <input id="carCurrentDate" type="date" class="datepicker"/>
+                                            <label for="carCurrentDate"></label >
+                                        </div>
+                                        <div class="col s2 m1 l1  valign">
+                                            <h6>Date</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <select id="fuelType">
+                                <option value="gasoline">Gasoline</option>
+                                <option value="diesel">Diesel</option>
+                            </select>
+                            <label class="">What is the Fuel Type of Your Car?</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s8 m8 l8">
+                            <i class="material-icons prefix">drive_eta</i>
+                            <input id="fuelEfficiency" type="number" name="fuelEfficiency" min="0" required>
+                            <label  class="active">Fuel efficiency of your car?</label>
+                        </div>
+                        <div class="input-field col s4 m4 l4">
+                            <input type="checkbox" id="fuelEfficiencyCheckbox"/>
+                            <label for="fuelEfficiencyCheckbox">Find it</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <ul class="collapsible no-shadow" id="fuelEfficiencyCarSelection" data-collapsible="expandable">
+                            <li>
+                                <div class="collapsible-body" id="fuelEfficiencyCollapse">
+                                    <div class="row">
+                                        &nbsp;
+                                    </div>
+                                    <div class="row">
+                                        <div class="input-field col s4 m4 l4">
+                                            <select id="carMake" class="">
+                                                <option value="" disabled selected>Select a Make</option>
+                                            </select>
+                                            <label>Make</label>
+                                        </div>
+                                        <div class="input-field col s4 m4 l4">
+                                            <select id="carModel" class="select">
+                                                <option value="" disabled selected>Select a Model</option>
+                                            </select>
+                                            <label>Model</label>
+                                        </div>
+                                        <div class="input-field col s4 m4 l4">
+                                            <select id="carYear" class="select">
+                                                <option value="" disabled selected>Select a Year</option>
+                                            </select>
+                                            <label>Year</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </form>
+
         <div class="row center">
             <h5>How much do you eat per week?</h5>
         </div>

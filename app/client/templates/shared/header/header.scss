@@ -88,6 +88,24 @@ $separation: $height / 6;
   top: calc((#{$separation} * 4) - (#{$spanHeight} / 2));
 }
 
+#nav-icon1:hover span:nth-child(1) {
+  top: calc((#{$separation} * 1.75) - (#{$spanHeight} / 2));
+  width: 110%;
+}
+
+#nav-icon1:hover span:nth-child(2) {
+  top: calc((#{$separation} * 3) - (#{$spanHeight} / 2));
+  left: -5px;
+  width: 100%;
+
+}
+
+#nav-icon1:hover span:nth-child(3) {
+  top: calc((#{$separation} * 4.25) - (#{$spanHeight} / 2));
+  width: 110%;
+
+}
+
 #nav-icon1.open span:nth-child(1) {
   top: calc((#{$separation} * 3) - (#{$spanHeight} / 2));
   -webkit-transform: rotate(135deg);

@@ -24,6 +24,7 @@ FlowRouter.route('/', {
 });
 
 var emissions = FlowRouter.group({
+    triggersEnter: [AccountsTemplates.ensureSignedIn],
     prefix: '/emissions'
 });
 
