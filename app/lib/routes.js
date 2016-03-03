@@ -44,6 +44,9 @@ emissions.route('/', {
 // http://app.com/documents/:carbonFactor
 emissions.route('/:carbonFactor', {
     action: function () {
+        //BlazeLayout.render('masterLayout', {
+        //
+        //})
         console.log("We're viewing a single document.");
     }
 });

@@ -1,3 +1,67 @@
 <template name="naturalGas">
-
+    <div id="naturalGas">
+        <form>
+            <div class="card">
+                <div class="card-image">
+                    <!--<img src="images/transportation/car3.png">-->
+                    <!--<span class="card-title"><h3>Car</h3></span>-->
+                </div>
+                <div class="card-content">
+                    <div class="row">
+                        <span class="font-size-x-large">You produce <span class="deep-orange-text">{{totalCarbon}}</span> tons of CO<sub>2</sub> from using <span class="deep-orange-text">{{totalUsage}} {{units}}</span> a year.</span>
+                    </div>
+                    <div class="row valign-wrapper">
+                        <div class="input-field col s6 m6 l6">
+                            <i class="material-icons prefix">directions_car</i>
+                            <input type="number" name="naturalGasUsed" id="naturalGasUsed" min="0" required>
+                        </div>
+                        <div class="col s3 input-field">
+                            <select id="gasUnits">
+                                <option value="CcF" selected="selected">100 Cubic Feet</option>
+                                <option value="McF">1000 Cubic Feet</option>
+                                <option value="BTU">British Thermal Units</option>
+                                <option value="Therms">Therms</option>
+                                <option value="kWh">Kilowatt Hours</option>
+                            </select>
+                        </div>
+                        <div class="col s3 valign">
+                            <input type="checkbox" id="naturalGasUsedCheckbox"/>
+                            <label for="naturalGasUsedCheckbox">Calculate it</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <ul class="collapsible no-shadow" id="naturalGasUsedCalculate" data-collapsible="expandable">
+                            <li>
+                                <div class="collapsible-body" id="naturalGasUsedCollapse">
+                                    <div class="row">
+                                        <p>
+                                            Pick the lowest and highest months of consumption over the last year from your gas bill.
+                                        </p>
+                                    </div>
+                                    <div class="row valign-wrapper">
+                                        <div class="input-field col s5">
+                                            <i class="material-icons prefix">directions_car</i>
+                                            <input  id="naturalGasLowestMonth" type="number" name="naturalGasLowestMonth" min="0" required>
+                                            <label class="active hide-on-small-only">Lowest Month</label>
+                                        </div>
+                                        <div class="col s1 valign">
+                                            <h6 style="">{{units}}</h6>
+                                        </div>
+                                        <div class="input-field col s5">
+                                            <i class="material-icons prefix">directions_car</i>
+                                            <input  id="naturalGasHighestMonth" type="number" name="naturalGasHighestMonth" min="0" required>
+                                            <label class="active hide-on-small-only">Highest Month</label>
+                                        </div>
+                                        <div class="col s1 valign">
+                                            <h6 style="">{{units}}</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
 </template>

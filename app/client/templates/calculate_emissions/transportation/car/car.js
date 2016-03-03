@@ -45,7 +45,6 @@ Template.car.events({
 
     "change #carDistanceTraveledCheckbox": function() {
         $("#carDistanceCollapse").slideToggle(0);
-
     },
     "change #carMileageLastCheck, change #carDateLastCheck, change #carCurrentMileage, change #carCurrentDate": function() {
 

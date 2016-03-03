@@ -3,7 +3,9 @@ Template.water.helpers({
 });
 
 Template.water.events({
-    //add your events here
+    "change #waterUsedCheckbox": function() {
+        $("#waterUsedCollapse").slideToggle(0);
+    }
 });
 
 Template.water.onCreated(function () {

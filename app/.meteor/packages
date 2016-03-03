@@ -51,3 +51,4 @@ meteorhacks:fast-render
 meteorhacks:subs-manager
 reactive-var
 materialize-mod
+zuuk:stale-session

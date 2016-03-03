@@ -1,3 +1,62 @@
 <template name="electricity">
-
+    <div id="electricity">
+        <form>
+            <div class="card">
+                <div class="card-image">
+                    <!--<img src="images/transportation/car3.png">-->
+                    <!--<span class="card-title"><h3>Car</h3></span>-->
+                </div>
+                <div class="card-content">
+                    <div class="row">
+                        <span class="font-size-x-large">You produce <span class="deep-orange-text">{{totalCarbon}}</span> tons of CO<sub>2</sub> from using <span class="deep-orange-text">{{totalUsage}} kilowatts</span> a year.</span>
+                    </div>
+                    <div class="row valign-wrapper">
+                        <div class="input-field col s8 m8 l6">
+                            <i class="material-icons prefix">directions_car</i>
+                            <input type="number" name="electricityUsed" id="electricityUsed" min="0" required>
+                            <label class="active">Kilowatts</label>
+                        </div>
+                        <div class="col s0 m0 l2 valign">
+                            <h6 style="text-transform: capitalize">{{units}}</h6>
+                        </div>
+                        <div class="col s4 m4 l4 valign">
+                            <input type="checkbox" id="electricityUsedCheckbox"/>
+                            <label for="electricityUsedCheckbox">Calculate it</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <ul class="collapsible no-shadow" id="electricityUsedCalculate" data-collapsible="expandable">
+                            <li>
+                                <div class="collapsible-body" id="electricityUsedCollapse">
+                                    <div class="row">
+                                        <span>
+                                            From your electricity bill, pick the lowest and highest months of consumption over the last year.  If you have solar panels use “Net kWh.”
+                                        </span>
+                                    </div>
+                                    <div class="row valign-wrapper">
+                                        <div class="input-field col s5">
+                                            <i class="material-icons prefix">directions_car</i>
+                                            <input  id="electricityLowestMonth" type="number" name="electricityLowestMonth" min="0" required>
+                                            <label class="active hide-on-small-only">Lowest Month</label>
+                                        </div>
+                                        <div class="col s1 valign">
+                                            <h6 style="">kWh</h6>
+                                        </div>
+                                        <div class="input-field col s5">
+                                            <i class="material-icons prefix">directions_car</i>
+                                            <input  id="electricityHighestMonth" type="number" name="electricityHighestMonth" min="0" required>
+                                            <label class="active hide-on-small-only">Highest Month</label>
+                                        </div>
+                                        <div class="col s1 valign">
+                                            <h6 style="">kWh</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
 </template>
