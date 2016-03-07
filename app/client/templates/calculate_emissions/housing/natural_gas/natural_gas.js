@@ -51,6 +51,32 @@ Template.naturalGas.events({
     },
     "change #gasUnits": function() {
         Session.set("gasUnits", document.getElementById("gasUnits").value);
+        var lowestMonth = parseInt(document.getElementById("naturalGasLowestMonth").value);
+        var highestMonth = parseInt(document.getElementById("naturalGasHighestMonth").value);
+        var naturalGasUsed = parseInt(document.getElementById("naturalGasUsed").value);
+        var gasUnits = Session.get("gasUnits");
+
+        if (!(isNaN(lowestMonth)) && !(isNaN(highestMonth))) {
+            if (gasUnits === "CcF") {
+                naturalGasUsed = (lowestMonth + highestMonth) * 6;
+
+            } else if (gasUnits === "McF") {
+                naturalGasUsed = (lowestMonth + highestMonth) * 6 * 0.1;
+
+            } else if (gasUnits === "BTU") {
+                naturalGasUsed = (lowestMonth + highestMonth) * 6 * 102800;
+
+            } else if (gasUnits === "Therms") {
+                naturalGasUsed = (lowestMonth + highestMonth) * 6 * 1.028;
+
+            } else if (gasUnits === "kWh") {
+                naturalGasUsed = (lowestMonth + highestMonth) * 6 * 29.31;
+
+            }
+            document.getElementById("naturalGasUsed").value = naturalGasUsed;
+            Session.set("totalNaturalGasUsed", naturalGasUsed);
+            Session.set("totalNaturalGasCarbon", (naturalGasUsed/100) * 54.7 * 1.14 * 0.000001);
+        }
     }
 });
 

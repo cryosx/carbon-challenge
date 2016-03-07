@@ -79,6 +79,7 @@ Template.motorcycle.onCreated(function () {
 });
 
 Template.motorcycle.onRendered(function () {
+    $('select').material_select();
     Session.set("motorcycleDistanceTraveled", 0);
     Session.set("totalMotorcycleCarbon", 0);
 });

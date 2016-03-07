@@ -1,3 +1,35 @@
 <template name="recycling">
-
+    <div id="recycling">
+        <form>
+            <div class="card">
+                <div class="card-image">
+                    <!--<img src="images/transportation/car3.png">-->
+                    <!--<span class="card-title"><h3>Car</h3></span>-->
+                </div>
+                <div class="card-content">
+                    <div class="row">
+                        <span class="font-size-x-large">You produce <span class="deep-orange-text">{{totalCarbon}}</span> tons of CO<sub>2</sub> a year after recycling is taken into account.</span>
+                    </div>
+                    <div class="row">
+                        <div class="row input-field valign-wrapper">
+                            <span class="col s7 valign">Do you recycle?</span>
+                            <select id="recyclingSelect" class="col s5">
+                                <option value="Little" selected="selected">Not Much</option>
+                                <option value="Some">Some of Our Waste</option>
+                                <option value="All">All Materials Locally Recyclable</option>
+                            </select>
+                        </div>
+                        <div class="row input-field valign-wrapper">
+                            <span class="col s7 valign">Do you compost food and/or yard trimmings?</span>
+                            <select id="compostingSelect" class="col s5">
+                                <option value="Rarely" selected="selected">Rarely</option>
+                                <option value="Sometimes">Sometimes</option>
+                                <option value="Whenever">Whenever Possible</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
 </template>

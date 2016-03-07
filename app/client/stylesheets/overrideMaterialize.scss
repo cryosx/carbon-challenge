@@ -69,3 +69,10 @@ a#at-nav-button {
 .picker__close:hover {
   background-color: #E8E8E8;
 }
+
+.collapsible-body {
+  display: none;
+  border-bottom: 1px solid #ddd;
+  box-sizing: border-box;
+  padding: 3% 1% 1% 1%;
+}
