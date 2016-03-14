@@ -1,0 +1,22 @@
+<template name="treeSpeciesSearch">
+
+    {{#if Template.subscriptionsReady}}
+
+        <div class="input-field col s12">
+            <i class="material-icons prefix">local_florist</i>
+            {{> inputAutocomplete settings=settings id="treeSpecies" class="" name="treeSpecies" placeholder="e.g. Milo" }}
+            <label for="treeSpecies" class="active">Species</label>
+        </div>
+    {{else}}
+        {{>loading}}
+        <!--{{> spinner}}-->
+    {{/if}}
+
+</template>
+
+
+<template name="treeSpecies">
+
+    <span>Genus: {{genus}}, Scientific Name: {{name}}, Common Name: {{commonName}}</span>
+
+</template>

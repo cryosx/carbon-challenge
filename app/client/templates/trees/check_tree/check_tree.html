@@ -1,0 +1,109 @@
+<template name="checkTree">
+    <div class="card">
+		<div class="card-content">
+		 <div class="row">
+        <div class="col-md-12" style="text-align: center">
+            <br>
+            <br>
+            <br>
+            <h1>My <strong class="light-green-text">Trees</strong></h1>
+            <br>
+            <br>
+        </div>
+    </div>
+
+
+    <div class="padding">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="map-container">
+                    {{> googleMap name="exampleMap" options=exampleMapOptions}}
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col s12 m12 l12 card">
+                <div class="card-content">
+                    <div id="tree-carousel" class="owl-carousel">
+                        <!--  <div id="tree1" class="item"><img src="/parallax/babyTree.jpg" alt="/parallax/treeSample.jpg"></div>
+                              <div class="item"><img src="/parallax/tree1.jpg" alt="/parallax/treeSample.jpg"></div>
+                              <div class="item"><img src="/parallax/tree2.jpg" alt="/parallax/treeSample.jpg"></div>
+                              <div class="item"><img src="/parallax/tree3.jpg" alt="/parallax/treeSample.jpg"></div>
+                              <div class="item"><img src="/parallax/tree4.jpg" alt="/parallax/treeSample.jpg"></div>
+                              <div class="item"><img src="/parallax/tree5.jpg" alt="/parallax/treeSample.jpg"></div>
+                              <div class="item"><img src="/parallax/tree6.jpg" alt="/parallax/treeSample.jpg"></div>
+                              <div class="item"><img src="/parallax/tree7.jpg" alt="/parallax/treeSample.jpg"></div>
+                              <div class="item"><img src="/parallax/tree8.jpg" alt="/parallax/treeSample.jpg"></div>-->
+                    </div>
+
+                    <script>
+
+                        var treeRecords = TreeCollection.find({userID: Meteor.userId()}, {sort : ['createdDate', 'dsc']}).fetch();
+                        var words = [];
+
+                        for(var i = 0; i < treeRecords.length; i++) {
+                            var content = "<div class=\"item\"><img id=\"tree" + (i+1) +"\" class=\"tree\" src=\"/parallax/tree" + (i+1) +".jpg\" alt=\"/parallax/treeSample.jpg\"></div>";
+                            //var content = "<div class=\"item\"><img id=\"tree1\" class=\"tree\" src=\"/parallax/tree" + (i+1) +".jpg\" alt=\"/parallax/treeSample.jpg\"></div>";
+                            console.log(content);
+                            var htmlObject = document.createElement('div');
+                            htmlObject.innerHTML = content;
+                            document.getElementById("tree-carousel").appendChild(htmlObject);
+                            words[i] = i+1;
+                        }
+
+                        document.querySelector('body').addEventListener('click', function (event) {
+                            if (event.target.className.toLowerCase() === "item") {
+                                alert(event.target.id);
+                            }
+                            if( $(event.target).hasClass("tree") )
+                            {
+                                var tree = event.target.id;
+                                var treeID = tree.slice(4);
+                                treeRecord = treeRecords[treeID - 1];
+                                console.log(treeRecord);
+                                setMarker();
+                            }
+
+                            function setMarker() {
+                                var lat = parseFloat(treeRecord.latitude);
+                                var lng = parseFloat(treeRecord.longitude);
+
+                                //var lat = parseFloat($("#latitude").val());
+                                //var lng = parseFloat($("#longitude").val());
+                                console.log("Lat: " + lat);
+                                console.log("Lng: " + lng);
+
+                                if (!isNaN(lat) || !isNaN(lng)) {
+                                    if (lat > -90 && lat < 90 && lng > -180 && lat < 90) {
+                                        marker.setPosition({lat: lat, lng: lng});
+                                        marker.getMap().setCenter({lat: lat, lng: lng});
+                                    }
+
+                                }
+                            }
+                        });
+
+
+                    </script>
+
+                    <div class="customNavigation row">
+                        <div class="col s2 m4 l4" >&nbsp;</div>
+                        <a class="btn-flat prev waves-effect waves-ripple col s4 m2 l2"><i class="large material-icons">keyboard_arrow_left</i></a>
+
+                        <a class="btn-flat next waves-effect waves-ripple col s4 m2 l2"><i class="large material-icons">keyboard_arrow_right</i></a>
+                        <div class="col s2 m4 l4">&nbsp;</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="center">
+                <a href="/pathways" class="waves-effect waves-light btn" id="finish3">Finish</a>
+            </div>
+        </div>
+    </div>
+		</div>
+    </div>
+</template>

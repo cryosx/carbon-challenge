@@ -1,11 +1,10 @@
 <template name="emissionsNav">
-    <div class="emissions-nav z-depth-1">
-        <div class="row">
+    <div class="emissions-nav">
+        <div class="row z-depth-1">
             <ul class="tabs">
                 <li class="tab col s3">
                     <a href="#transportation" class="active">
                         <span><i class="fa fa-plane"></i> Transportation</span>
-                        {{totalTransportationCarbon}}
                     </a>
                 </li>
                 <li class="tab col s3">
@@ -25,6 +24,60 @@
                 </li>
                 <!--<li class="tab col s2"><a href="#services"><i class="fa fa-wheelchair"></i> Services</a></li>-->
             </ul>
+        </div>
+        <div class="row">
+            <div class="col m3">
+                <div class="card materialize-red lighten-1">
+                    <div class="card-content row white-text">
+                        <div class="col s6 font-size-x-large">
+                            {{totalTransportationCarbon}}
+                        </div>
+                        <div class="cols s6" id="transportationChart">
+                            {{createTransportationChart}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col m3">
+                <div class="card light-blue">
+                    <div class="card-content row white-text">
+                        <div class="col s6 font-size-x-large">
+                            {{totalHousingCarbon}}
+                        </div>
+                        <div class="cols s6" id="housingChart">
+                            <!--{{createHousingChart}}-->
+                            {{createTransportationChart}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col m3">
+                <div class="card yellow lighten-1">
+                    <div class="card-content row white-text">
+                        <div class="col s6 font-size-x-large">
+                            {{totalFoodCarbon}}
+                        </div>
+                        <div class="cols s6" id="foodChart">
+                            <!--{{createFoodChart}}-->
+                            {{createTransportationChart}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col m3">
+                <div class="card light-green darken-1">
+                    <div class="card-content row white-text">
+                        <div class="col s6 font-size-x-large">
+                            {{totalRecyclingCarbon}}
+
+                        </div>
+                        <div class="cols s6" id="recyclingChart">
+                            <!--{{createRecyclingChart}}-->
+                            {{createTransportationChart}}
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </template>

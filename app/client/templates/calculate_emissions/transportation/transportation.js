@@ -68,7 +68,7 @@ Template.transportation.onRendered(function () {
     $('.collapsible').collapsible({
         accordion : false // A setting that changes the collapsible behavior to expandable instead of the default accordion style
     });
-    $('.tabs-wrapper .row').pushpin({ top: $('.tabs-wrapper').offset().top });
+    //$('.tabs-wrapper .row').pushpin({ top: $('.tabs-wrapper').offset().top });
 
 });
 

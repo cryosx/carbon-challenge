@@ -1,0 +1,340 @@
+<template name="plantTree">
+    <div id="plantTree">
+        <form id="treeData" action="">
+            <div class="padding ">
+                <div class="row">
+                    <div class="card">
+                        <div class="card-content">
+                            <span class="card-title"><h4 class="">Enter Your <strong class="light-green-text">Tree
+                                Data</strong></h4></span>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <div class="row">
+                            <div class="col s12 m12 l6 push-l6">
+                                <div id="rightColumn" class="map-container">
+                                    {{> googleMap name="treeMap" options=treeMapOptions}}
+                                </div>
+                            </div>
+                            <div class="col s12 m12 l6 push-l6">
+                                <div id="rightColumn2">
+                                    <div class="col s12 m12 l12 card">
+                                        <div class="card-content">
+                                            <img src="babyTree.jpg" style="width:100%;height:100%">
+                                        </div>
+                                    </div>
+
+                                    <div class="col s12 m9 l9 card">
+                                        <div class="card-content">
+                                            <h5 id="species"></h5>
+                                            <br>
+                                            <h7>___________________________________________________________</h7>
+                                            <br>
+                                            <h7 style="display:inline" id="diameter"></h7>
+                                            <h7 id="sequester">This tree will sequester 270877 Kg of CO2 over its life
+                                                time
+                                            </h7>
+
+                                            <br>
+                                            <a style="display:inline" id="description"> </a>
+                                            <br>
+
+                                            {{>treeChart}}
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col s12 m12 l6 pull-l6">
+                                <div class="row">
+                                    {{>treeSpeciesSearch}}
+                                </div>
+                                <div class="row">
+                                    <div class="input-field col s12 m12 l12">
+                                        <i class="material-icons prefix">place</i>
+                                        <input id="location" type="text" class="validate" placeholder="e.g. Kailua"
+                                               required>
+                                        <label for="location" class=active>Location</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="input-field col s12 m12 l12">
+                                        <i class="material-icons prefix">gps_fixed</i>
+                                        <input id="latitude" min="-90" max="90" type="number" step="any"
+                                               class="validate" placeholder="e.g. 21.3500" required>
+                                        <label for="latitude" class="active">Latitude</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="input-field col s12 m12 l12">
+                                        <i class="material-icons prefix">gps_fixed</i>
+                                        <input id="longitude" min="-180" max="180" type="number" step="any"
+                                               class="validate" placeholder="e.g. -157.8000" required>
+                                        <label for="longitude" class="active">Longitude</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="input-field col s12 m12 l12">
+                                        <i class="material-icons prefix">date_range</i>
+                                        <input id="datePlanted" type="text" class="datepicker" placeholder="e.g. Januarary 1, 2015"
+                                               required>
+                                        <label for="datePlanted" class="active">Date Planted</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col s12 m12 l12 card">
+                        <form action="/file-upload" class="dropzone" id="dropzone"></form>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col s12 m12 l12 card">
+                        <a id="picture">test</a>
+                        {{#with FS.GetFile "Images" "JAiyrSEDwDiFnyN3T"}}
+                            <img src="{{this.url store='thumbnails'}}" alt="">
+                        {{/with}}
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="center">
+                        <a id="cancel" href="/pathways" class="btn red">Cancel</a>
+                        <a class="waves-effect waves-light btn next" id="save">Save</a>
+                        <a id="test" class="btn red">Test</a>
+                    </div>
+                </div>
+
+
+                <div id="info" class="row">
+                    <div class="col s12 m3 l3 card">
+                        <div class="card-content">
+                            <img src="babyTree.jpg" style="width:100%;height:100%">
+                        </div>
+                    </div>
+
+                    <div class="col s12 m9 l9 card">
+                        <div class="card-content">
+                            <h2 id="species1"></h2>
+                            <br>
+                            <h7>___________________________________________________________</h7>
+                            <br>
+                            <h2 style="display:inline">Planted in </h2>
+                            <h2 style="display:inline" id="location1"></h2>
+                            <h2 style="display:inline">&nbsp;on </h2>
+                            <h2 style="display:inline" id="datePlanted1"></h2>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="info2" class="row">
+                    <div class="col s12 m12 l12 card">
+                        <h5 id="demo">This tree will sequester 270877 Kg of CO2 over its life time</h5>
+
+                        {{>treeChart}}
+                    </div>
+                </div>
+
+            </div>
+        </form>
+    </div>
+</template>
+
+<template name="treeChart">
+
+    <div data-highcharts-chart="0" id="container" style="min-width: 310px; height: 400px; margin: 0 auto">
+        <div style="position: relative; overflow: hidden; width: 500px; height: 250px; text-align: left; line-height: normal; z-index: 0; left: 0px; top: 0px;"
+             id="highcharts-0" class="highcharts-container">
+            <svg height="250" width="282" xmlns="http://www.w3.org/2000/svg"
+                 style="font-family:Arial, Helvetica, sans-serif;font-size:12px;" version="1.1">
+                <desc>Created with Highcharts 4.2.1</desc>
+                <defs>
+                    <clipPath id="highcharts-1">
+                        <rect height="110" width="190" y="0" x="0"></rect>
+                    </clipPath>
+                    <linearGradient id="highcharts-4" y2="1" x2="0" y1="0" x1="0">
+                        <stop stop-opacity="1" stop-color="#7cb5ec" offset="0"></stop>
+                        <stop stop-opacity="0" stop-color="rgb(124,181,236)" offset="1"></stop>
+                    </linearGradient>
+                </defs>
+                <rect class=" highcharts-background" fill="#FFFFFF" strokeWidth="0" height="250" width="282" y="0"
+                      x="0"></rect>
+                <g zIndex="1" class="highcharts-grid"></g>
+                <g zIndex="1" class="highcharts-grid">
+                    <path opacity="1" zIndex="1" stroke-width="1" stroke="#D8D8D8" d="M 82 184.5 L 272 184.5"
+                          fill="none"></path>
+                    <path opacity="1" zIndex="1" stroke-width="1" stroke="#D8D8D8" d="M 82 129.5 L 272 129.5"
+                          fill="none"></path>
+                    <path opacity="1" zIndex="1" stroke-width="1" stroke="#D8D8D8" d="M 82 73.5 L 272 73.5"
+                          fill="none"></path>
+                </g>
+                <g zIndex="2" class="highcharts-axis">
+                    <path opacity="1" stroke-width="1" stroke="#C0D0E0" d="M 160.5 184 L 160.5 194" fill="none"></path>
+                    <path opacity="1" stroke-width="1" stroke="#C0D0E0" d="M 269.5 184 L 269.5 194" fill="none"></path>
+                    <text y="227" style="color:#707070;fill:#707070;" class=" highcharts-xaxis-title"
+                          transform="translate(0,0)" text-anchor="middle" zIndex="7" x="177">Year
+                    </text>
+                    <path zIndex="7" stroke-width="1" stroke="#C0D0E0" d="M 82 184.5 L 272 184.5" fill="none"></path>
+                </g>
+                <g zIndex="2" class="highcharts-axis">
+                    <text y="129" style="color:#707070;fill:#707070;" class=" highcharts-yaxis-title"
+                          transform="translate(0,0) rotate(270 29.71666717529297 129)" text-anchor="middle" zIndex="7"
+                          x="29.71666717529297">
+                        <tspan>CO2 sequestered (kg)</tspan>
+                    </text>
+                </g>
+                <g zIndex="3" class="highcharts-series-group">
+                    <path d="M 0 0" fill-opacity="0.25" fill="#7cb5ec"></path>
+                    <g clip-path="url(#highcharts-1)" transform="translate(82,74) scale(1 1)" zIndex="0.1"
+                       class="highcharts-series highcharts-series-0">
+                        <path zIndex="0"
+                              d="M 1.8627450980392157 107.3291725 L 4.054209919261822 104.749205 L 6.245674740484429 102.257045 L 8.437139561707035 99.849695
+                                                  L 10.628604382929643 97.5242675 L 12.820069204152249 95.2779575 L 15.011534025374855 93.1080975 L 17.202998846597463 91.0120475
+                                                  L 19.39446366782007 88.98736 L 21.585928489042676 87.0315325 L 23.777393310265282 85.1422825 L 25.968858131487888 83.3173275 L
+                                                  28.160322952710494 81.5544675 L 30.3517877739331 79.851585 L 32.54325259515571 78.206645 L 34.73471741637832 76.617695 L
+                                                  36.92618223760092 75.08281 L 39.11764705882353 73.60014749999999 L 41.30911188004614 72.16792 L 43.50057670126874 70.78444999999999
+                                                  L 45.69204152249135 69.44806 L 47.883506343713954 68.157155 L 50.074971164936564 66.9101675 L 52.266435986159166 65.7056125 L
+                                                  54.457900807381776 64.54203249999999 L 56.64936562860438 63.4180525 L 58.84083044982699 62.332325 L 61.0322952710496 61.28355749999999
+                                                  L 63.2237600922722 60.27045749999999 L 65.41522491349481 59.2918425 L 67.60668973471742 58.34653 L 69.79815455594002 57.433364999999995
+                                                  L 71.98961937716263 56.5513025 L 74.18108419838524 55.6992425 L 76.37254901960785 54.8761675 L 78.56401384083046 54.081115 L
+                                                  80.75547866205305 53.31309499999999 L 82.94694348327566 52.5712275 L 85.13840830449827 51.854605 L 87.32987312572088 51.162375 L
+                                                  89.52133794694348 50.49368499999999 L 91.71280276816609 49.847737499999994 L 93.9042675893887 49.22379 L 96.0957324106113 48.6210725 L
+                                                  98.28719723183391 48.038869999999996 L 100.47866205305651 47.4764675 L 102.67012687427912 46.933205 L 104.86159169550173 46.40842249999999
+                                                  L 107.05305651672434 45.901515 L 109.24452133794694 45.41185 L 111.43598615916954 44.93885 L 113.62745098039215 44.4819375 L
+                                                  115.81891580161476 44.040589999999995 L 118.01038062283737 43.614230000000006 L 120.20184544405997 43.202389999999994 L 122.39331026528258
+                                                  42.804575 L 124.58477508650519 42.420289999999994 L 126.7762399077278 42.049094999999994 L 128.9677047289504 41.6905225 L 131.159169550173
+                                                  41.344132499999986 L 133.3506343713956 41.0095675 L 135.54209919261822 40.68635999999999 L 137.73356401384083 40.374152499999994 L
+                                                  139.92502883506344 40.072559999999996 L 142.11649365628605 39.781252499999994 L 144.30795847750863 39.49984499999999 L 146.49942329873124
+                                                  39.22800749999999 L 148.69088811995385 38.96543749999999 L 150.88235294117646 38.711805 L 153.07381776239907 38.46678 L 155.26528258362168
+                                                  38.230115 L 157.4567474048443 38.00148 L 159.6482122260669 37.780654999999996 L 161.8396770472895 37.567310000000006 L 164.0311418685121
+                                                  37.36125249999999 L 166.2226066897347 37.162207499999994 L 168.4140715109573 36.96992749999998 L 170.60553633217992 36.78416499999999 L
+                                                  172.79700115340253 36.604755 L 174.98846597462514 36.43145 L 177.17993079584775 36.264030000000005 L 179.37139561707036 36.10230249999999
+                                                  L 181.56286043829297 35.946102499999995 L 183.75432525951555 35.795182499999996 L 185.94579008073816 35.64943249999999 L 188.13725490196077
+                                                  35.50863249999999 L 188.13725490196077 110 L 1.8627450980392157 110"
+                              fill="url(#highcharts-4)"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" zIndex="1"
+                              stroke-width="1" stroke="#7cb5ec"
+                              d="M 1.8627450980392157 107.3291725 L 4.054209919261822 104.749205 L 6.245674740484429 102.257045 L 8.437139561707035 99.849695 L
+                                                  10.628604382929643 97.5242675 L 12.820069204152249 95.2779575 L 15.011534025374855 93.1080975 L 17.202998846597463 91.0120475 L
+                                                  19.39446366782007 88.98736 L 21.585928489042676 87.0315325 L 23.777393310265282 85.1422825 L 25.968858131487888 83.3173275 L 28.160322952710494
+                                                   81.5544675 L 30.3517877739331 79.851585 L 32.54325259515571 78.206645 L 34.73471741637832 76.617695 L 36.92618223760092 75.08281
+                                                   L 39.11764705882353 73.60014749999999 L 41.30911188004614 72.16792 L 43.50057670126874 70.78444999999999 L 45.69204152249135 69.44806
+                                                   L 47.883506343713954 68.157155 L 50.074971164936564 66.9101675 L 52.266435986159166 65.7056125 L 54.457900807381776 64.54203249999999
+                                                   L 56.64936562860438 63.4180525 L 58.84083044982699 62.332325 L 61.0322952710496 61.28355749999999 L 63.2237600922722 60.27045749999999
+                                                   L 65.41522491349481 59.2918425 L 67.60668973471742 58.34653 L 69.79815455594002 57.433364999999995 L 71.98961937716263 56.5513025 L
+                                                   74.18108419838524 55.6992425 L 76.37254901960785 54.8761675 L 78.56401384083046 54.081115 L 80.75547866205305 53.31309499999999 L
+                                                    82.94694348327566 52.5712275 L 85.13840830449827 51.854605 L 87.32987312572088 51.162375 L 89.52133794694348 50.49368499999999 L
+                                                    91.71280276816609 49.847737499999994 L 93.9042675893887 49.22379 L 96.0957324106113 48.6210725 L 98.28719723183391 48.038869999999996
+                                                    L 100.47866205305651 47.4764675 L 102.67012687427912 46.933205 L 104.86159169550173 46.40842249999999 L 107.05305651672434 45.901515
+                                                    L 109.24452133794694 45.41185 L 111.43598615916954 44.93885 L 113.62745098039215 44.4819375 L 115.81891580161476 44.040589999999995
+                                                    L 118.01038062283737 43.614230000000006 L 120.20184544405997 43.202389999999994 L 122.39331026528258 42.804575 L 124.58477508650519
+                                                    42.420289999999994 L 126.7762399077278 42.049094999999994 L 128.9677047289504 41.6905225 L 131.159169550173 41.344132499999986 L
+                                                    133.3506343713956 41.0095675 L 135.54209919261822 40.68635999999999 L 137.73356401384083 40.374152499999994 L 139.92502883506344
+                                                    40.072559999999996 L 142.11649365628605 39.781252499999994 L 144.30795847750863 39.49984499999999 L 146.49942329873124 39.22800749999999
+                                                    L 148.69088811995385 38.96543749999999 L 150.88235294117646 38.711805 L 153.07381776239907 38.46678 L 155.26528258362168 38.230115 L
+                                                    157.4567474048443 38.00148 L 159.6482122260669 37.780654999999996 L 161.8396770472895 37.567310000000006 L 164.0311418685121 37.36125249999999
+                                                     L 166.2226066897347 37.162207499999994 L 168.4140715109573 36.96992749999998 L 170.60553633217992 36.78416499999999 L 172.79700115340253
+                                                     36.604755 L 174.98846597462514 36.43145 L 177.17993079584775 36.264030000000005 L 179.37139561707036 36.10230249999999 L 181.56286043829297
+                                                      35.946102499999995 L 183.75432525951555 35.795182499999996 L 185.94579008073816 35.64943249999999 L 188.13725490196077 35.50863249999999"
+                              fill="none"></path>
+                        <path style="" class=" highcharts-tracker" zIndex="2" stroke-width="21"
+                              stroke="rgba(192,192,192,0.0001)" visibility="visible"
+                              stroke-linejoin="round"
+                              d="M -8.137254901960784 107.3291725 L 1.8627450980392157 107.3291725 L 4.054209919261822 104.749205 L 6.245674740484429 102.257045 L
+                                                  8.437139561707035 99.849695 L 10.628604382929643 97.5242675 L 12.820069204152249 95.2779575 L 15.011534025374855 93.1080975 L 17.202998846597463
+                                                   91.0120475 L 19.39446366782007 88.98736 L 21.585928489042676 87.0315325 L 23.777393310265282 85.1422825 L 25.968858131487888 83.3173275 L
+                                                   28.160322952710494 81.5544675 L 30.3517877739331 79.851585 L 32.54325259515571 78.206645 L 34.73471741637832 76.617695 L 36.92618223760092 75.08281
+                                                    L 39.11764705882353 73.60014749999999 L 41.30911188004614 72.16792 L 43.50057670126874 70.78444999999999 L 45.69204152249135 69.44806 L
+                                                    47.883506343713954 68.157155 L 50.074971164936564 66.9101675 L 52.266435986159166 65.7056125 L 54.457900807381776 64.54203249999999 L
+                                                    56.64936562860438 63.4180525 L 58.84083044982699 62.332325 L 61.0322952710496 61.28355749999999 L 63.2237600922722 60.27045749999999 L
+                                                    65.41522491349481 59.2918425 L 67.60668973471742 58.34653 L 69.79815455594002 57.433364999999995 L 71.98961937716263 56.5513025 L 74.18108419838524
+                                                     55.6992425 L 76.37254901960785 54.8761675 L 78.56401384083046 54.081115 L 80.75547866205305 53.31309499999999 L 82.94694348327566 52.5712275
+                                                     L 85.13840830449827 51.854605 L 87.32987312572088 51.162375 L 89.52133794694348 50.49368499999999 L 91.71280276816609 49.847737499999994 L
+                                                     93.9042675893887 49.22379 L 96.0957324106113 48.6210725 L 98.28719723183391 48.038869999999996 L 100.47866205305651 47.4764675 L 102.67012687427912
+                                                     46.933205 L 104.86159169550173 46.40842249999999 L 107.05305651672434 45.901515 L 109.24452133794694 45.41185 L 111.43598615916954 44.93885 L
+                                                      113.62745098039215 44.4819375 L 115.81891580161476 44.040589999999995 L 118.01038062283737 43.614230000000006 L 120.20184544405997 43.202389999999994
+                                                       L 122.39331026528258 42.804575 L 124.58477508650519 42.420289999999994 L 126.7762399077278 42.049094999999994 L 128.9677047289504 41.6905225
+                                                        L 131.159169550173 41.344132499999986 L 133.3506343713956 41.0095675 L 135.54209919261822 40.68635999999999 L 137.73356401384083 40.374152499999994
+                                                        L 139.92502883506344 40.072559999999996 L 142.11649365628605 39.781252499999994 L 144.30795847750863 39.49984499999999 L 146.49942329873124
+                                                        39.22800749999999 L 148.69088811995385 38.96543749999999 L 150.88235294117646 38.711805 L 153.07381776239907 38.46678 L 155.26528258362168 38.230115
+                                                         L 157.4567474048443 38.00148 L 159.6482122260669 37.780654999999996 L 161.8396770472895 37.567310000000006 L 164.0311418685121 37.36125249999999 L
+                                                         166.2226066897347 37.162207499999994 L 168.4140715109573 36.96992749999998 L 170.60553633217992 36.78416499999999 L 172.79700115340253 36.604755 L
+                                                         174.98846597462514 36.43145 L 177.17993079584775 36.264030000000005 L 179.37139561707036 36.10230249999999 L 181.56286043829297 35.946102499999995 L
+                                                         183.75432525951555 35.795182499999996 L 185.94579008073816 35.64943249999999 L 188.13725490196077 35.50863249999999 L 198.13725490196077 35.50863249999999"
+                              fill="none"></path>
+                    </g>
+                    <g style="" clip-path="url(#highcharts-2)"
+                       transform="translate(82,74) scale(1 1)" zIndex="0.1"
+                       class="highcharts-markers highcharts-series-0 highcharts-tracker">
+                        <path visibility="hidden" stroke-width="1" stroke="#FFFFFF"
+                              d="M 78 50.081115 C 83.328 50.081115 83.328 58.081115 78 58.081115 C 72.672 58.081115 72.672 50.081115 78 50.081115 Z"
+                              fill="#7cb5ec"></path>
+                    </g>
+                </g>
+                <text y="24" style="color:#333333;font-size:18px;fill:#333333;width:218px;"
+                      zIndex="4" class="highcharts-title" text-anchor="middle" x="141">
+                    <tspan>Projected CO2 stored by</tspan>
+                    <tspan x="141" dy="21">this tree</tspan>
+                    <title>Projected CO2 stored by this tree</title></text>
+                <g zIndex="7" class="highcharts-axis-labels highcharts-xaxis-labels">
+                    <text opacity="1" y="203" transform="translate(0,0)" text-anchor="middle"
+                          style="color:#606060;cursor:default;font-size:11px;fill:#606060;width:180px;text-overflow:clip;"
+                          x="160.6180499597099">2050
+                    </text>
+                    <text opacity="1" y="203" transform="translate(0,0)" text-anchor="middle"
+                          style="color:#606060;cursor:default;font-size:11px;fill:#606060;width:180px;text-overflow:clip;"
+                          x="258.1000003814697">2100
+                    </text>
+                </g>
+                <g zIndex="7" class="highcharts-axis-labels highcharts-yaxis-labels">
+                    <text opacity="1" y="186" transform="translate(0,0)" text-anchor="end"
+                          style="color:#606060;cursor:default;font-size:11px;fill:#606060;width:83px;text-overflow:clip;"
+                          x="67">0k
+                    </text>
+                    <text opacity="1" y="131" transform="translate(0,0)" text-anchor="end"
+                          style="color:#606060;cursor:default;font-size:11px;fill:#606060;width:83px;text-overflow:clip;"
+                          x="67">200k
+                    </text>
+                    <text opacity="1" y="76" transform="translate(0,0)" text-anchor="end"
+                          style="color:#606060;cursor:default;font-size:11px;fill:#606060;width:83px;text-overflow:clip;"
+                          x="67">400k
+                    </text>
+                </g>
+                <g visibility="visible" opacity="0" transform="translate(42,-9999)"
+                   style="cursor:default;padding:0;pointer-events:none;white-space:nowrap;"
+                   zIndex="8" class="highcharts-tooltip">
+                    <path height="36" width="239" transform="translate(1, 1)" stroke-width="5"
+                          stroke-opacity="0.049999999999999996" stroke="black" isShadow="true"
+                          d="M 3.5 0.5 L 236.5 0.5 C 239.5 0.5 239.5 0.5 239.5 3.5 L 239.5 33.5 C 239.5 36.5 239.5 36.5 236.5 36.5 L 124.5 36.5 118.5 42.5 112.5 36.5 3.5 36.5 C 0.5 36.5 0.5 36.5 0.5 33.5 L 0.5 3.5 C 0.5 0.5 0.5 0.5 3.5 0.5"
+                          fill="none"></path>
+                    <path height="36" width="239" transform="translate(1, 1)" stroke-width="3"
+                          stroke-opacity="0.09999999999999999" stroke="black" isShadow="true"
+                          d="M 3.5 0.5 L 236.5 0.5 C 239.5 0.5 239.5 0.5 239.5 3.5 L 239.5 33.5 C 239.5 36.5 239.5 36.5 236.5 36.5 L 124.5 36.5 118.5 42.5 112.5 36.5 3.5 36.5 C 0.5 36.5 0.5 36.5 0.5 33.5 L 0.5 3.5 C 0.5 0.5 0.5 0.5 3.5 0.5"
+                          fill="none"></path>
+                    <path height="36" width="239" transform="translate(1, 1)" stroke-width="1"
+                          stroke-opacity="0.15" stroke="black" isShadow="true"
+                          d="M 3.5 0.5 L 236.5 0.5 C 239.5 0.5 239.5 0.5 239.5 3.5 L 239.5 33.5 C 239.5 36.5 239.5 36.5 236.5 36.5 L 124.5 36.5 118.5 42.5 112.5 36.5 3.5 36.5 C 0.5 36.5 0.5 36.5 0.5 33.5 L 0.5 3.5 C 0.5 0.5 0.5 0.5 3.5 0.5"
+                          fill="none"></path>
+                    <path stroke-width="1" stroke="#7cb5ec"
+                          d="M 3.5 0.5 L 236.5 0.5 C 239.5 0.5 239.5 0.5 239.5 3.5 L 239.5 33.5 C 239.5 36.5 239.5 36.5 236.5 36.5 L 124.5 36.5 118.5 42.5 112.5 36.5 3.5 36.5 C 0.5 36.5 0.5 36.5 0.5 33.5 L 0.5 3.5 C 0.5 0.5 0.5 0.5 3.5 0.5"
+                          fill="rgba(249, 249, 249, .85)"></path>
+                    <text y="20" style="font-size:12px;color:#333333;fill:#333333;" zIndex="1"
+                          x="8">
+                        <tspan>It will sequester 203 341.4kg by 2049</tspan>
+                    </text>
+                </g>
+                <text y="245" style="cursor:pointer;color:#909090;font-size:9px;fill:#909090;"
+                      zIndex="8" text-anchor="end" x="272">Highcharts.com
+                </text>
+            </svg>
+        </div>
+    </div>
+
+</template>

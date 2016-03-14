@@ -79,12 +79,30 @@ legal.route('/terms-of-use', {
     }
 });
 
+var trees = FlowRouter.group({
+    triggersEnter: [AccountsTemplates.ensureSignedIn],
+    prefix: '/trees'
+});
+
+trees.route('/', {
+    name: 'plant-trees',
+    action: function () {
+        BlazeLayout.render('masterLayout', {
+            header: 'header',
+            main: 'trees',
+            footer: 'footer'
+        })
+    }
+});
+
 // the App_notFound template is used for unknown routes and missing lists
 FlowRouter.notFound = {
     action: function() {
         BlazeLayout.render('masterLayout', {main: 'notFound'});
     }
 };
+
+
 
 
 // RIGHT NOW I'LL HAVE EVERYTHING RENDER THE MASTER LAYOUT AND THEN PASS IN THE COMPONENTS LIKE THE HEADER, FOOTER, AND

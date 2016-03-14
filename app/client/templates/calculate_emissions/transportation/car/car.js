@@ -1,3 +1,5 @@
+//var transportationChart = $("#transportationChart").highcharts();
+
 Template.car.helpers({
     units: function() {
         return Session.get("units");
@@ -8,9 +10,8 @@ Template.car.helpers({
         return (parseFloat(Session.get("carDistanceTraveled"))).toFixed(2);
     },
     totalCarbon: function() {
-
         return (parseFloat(Session.get("totalCarCarbon"))).toFixed(2);
-    },
+    }
 });
 
 function calculateTotalCarCarbon() {
@@ -31,6 +32,7 @@ function calculateTotalCarCarbon() {
     } else if (units === "kilometers") {
         totalCarCarbon = totalCarCarbon * 0.621371;
     }
+    //transportationChart.series[0].data[0].update((totalCarCarbon).toFixed(2));
     Session.set("totalCarCarbon", totalCarCarbon);
 }
 
@@ -80,9 +82,11 @@ Template.car.events({
 
         document.getElementById("carModel").innerHTML = "<option disabled selected>Select a Model</option>";
         document.getElementById("carYear").innerHTML = "<option disabled selected>Select a Year</option>";
-
         select.innerHTML = "<option disabled selected>Select a Make</option>";
 
+        cars.sort(function(a,b) {
+            return a.make.toUpperCase().localeCompare(b.make.toUpperCase());
+        });
 
         // Using " : " (space, colon, space) as a delimiter.
         cars.forEach(function(current, index) {
@@ -177,6 +181,12 @@ Template.car.events({
 });
 
 Template.car.onCreated(function () {
+
+    this.autorun(function () {
+        //this.subscribe('Cars');
+        Meteor.subscribe('Cars');
+
+    });
 });
 
 Template.car.onRendered(function () {

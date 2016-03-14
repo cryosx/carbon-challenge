@@ -1,0 +1,19 @@
+.owl-carousel .item img{
+    display: block;
+    width: 100%;
+    height: 300px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.customNavigation{
+    text-align: center;
+}
+.customNavigation a{
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}

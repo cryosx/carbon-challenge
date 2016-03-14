@@ -1,6 +1,5 @@
 Template.propaneAndOther.helpers({
     totalCarbon: function() {
-        console.log("?");
         return Session.get("totalPropaneAndOtherCarbon").toFixed(2);
     },
     totalUsage: function() {
@@ -9,7 +8,6 @@ Template.propaneAndOther.helpers({
 
 Template.propaneAndOther.events({
     "change #propaneAndOtherUsed": function() {
-        console.log("ALK?");
         var propaneAndOtherUsed = parseInt(document.getElementById("propaneAndOtherUsed").value);
         if (!(isNaN(propaneAndOtherUsed))) {
             Session.set("totalPropaneAndOtherUsed", propaneAndOtherUsed);
