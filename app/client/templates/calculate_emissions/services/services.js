@@ -99,7 +99,6 @@ Template.services.onDestroyed(function () {
 function validateTransport() {
     var errors =[];
 
-
     $('#transportation-form *').filter(':input').each(function(){
         if($(this).val() === "") {
             errors.push(this);

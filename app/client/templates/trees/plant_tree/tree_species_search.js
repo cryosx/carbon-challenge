@@ -9,7 +9,7 @@ Template.treeSpeciesSearch.helpers({
                 {
                     // token: '',
                     collection: TreeDiameter,
-                    field: 'commonName',
+                    field: 'genus',
                     matchAll: true,
                     template: Template.treeSpecies
                 }
@@ -157,7 +157,6 @@ Template.treeSpeciesSearch.onCreated(function () {
         self.subscribe('TreeCollection');
         self.subscribe('TreeDiameter');
     });
-
 });
 
 Template.treeSpeciesSearch.onRendered(function () {

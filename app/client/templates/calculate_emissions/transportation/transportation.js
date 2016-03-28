@@ -56,6 +56,7 @@ Template.transportation.events({
 
 Template.transportation.onCreated(function () {
     Session.set("units", "miles");
+    //Session.set("totalTransportationCarbon", Session.get("totalCarCarbon") + Session.get("totalMotorcycleCarbon") + Session.get("totalBusCarbon") + Session.get("totalRailCarbon") + Session.get("totalFlyingCarbon"));
 
 });
 

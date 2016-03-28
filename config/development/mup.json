@@ -2,7 +2,7 @@
   // Server authentication info
   "servers": [
     {
-      "host": "128.171.9.184",
+      "host": "128.171.9.183",
       "username": "mora",
       "password": "changeme",
       // or pem file (ssh based authentication)
@@ -30,7 +30,7 @@
   // ROOT_URL must be set to your correct domain (https or http)
   "env": {
     "PORT": 80,
-    "ROOT_URL": "http://128.171.9.184",
+    "ROOT_URL": "http://128.171.9.183",
     "MAIL_URL": "smtp://postmaster@sandboxd5fcd18ae97d4c74b7bad725bdec5232.mailgun.org:c0df4223f3df47ba50e526826ac8fa8a@smtp.mailgun.org:587"
   },
 

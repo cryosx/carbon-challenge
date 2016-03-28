@@ -4,11 +4,8 @@
   "adapter": "default",
   "modules": [
     "highcharts-3d.src.js",
-    "modules/exporting.js",
-    "modules/heatmap.js",
     "modules/data.js",
     "modules/drilldown.js",
-//    "themes/sand-signika.js"
     "themes/gray.js"
   ]
 }

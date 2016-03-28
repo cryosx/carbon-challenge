@@ -28,11 +28,8 @@
         <div class="row">
             <div class="col m3">
                 <div class="card materialize-red lighten-1">
-                    <div class="card-content row white-text">
-                        <div class="col s6 font-size-x-large">
-                            {{totalTransportationCarbon}}
-                        </div>
-                        <div class="cols s6" id="transportationChart">
+                    <div class="card-content row white-text no-padding">
+                        <div class="cols s12" id="transportationChart">
                             {{createTransportationChart}}
                         </div>
                     </div>
@@ -40,40 +37,27 @@
             </div>
             <div class="col m3">
                 <div class="card light-blue">
-                    <div class="card-content row white-text">
-                        <div class="col s6 font-size-x-large">
-                            {{totalHousingCarbon}}
-                        </div>
-                        <div class="cols s6" id="housingChart">
-                            <!--{{createHousingChart}}-->
-                            {{createTransportationChart}}
+                    <div class="card-content row white-text no-padding">
+                        <div class="cols s12" id="housingChart">
+                            {{createHousingChart}}
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col m3">
                 <div class="card yellow lighten-1">
-                    <div class="card-content row white-text">
-                        <div class="col s6 font-size-x-large">
-                            {{totalFoodCarbon}}
-                        </div>
-                        <div class="cols s6" id="foodChart">
-                            <!--{{createFoodChart}}-->
-                            {{createTransportationChart}}
+                    <div class="card-content row white-text no-padding">
+                        <div class="cols s12" id="foodChart">
+                            {{createFoodChart}}
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col m3">
                 <div class="card light-green darken-1">
-                    <div class="card-content row white-text">
-                        <div class="col s6 font-size-x-large">
-                            {{totalRecyclingCarbon}}
-
-                        </div>
-                        <div class="cols s6" id="recyclingChart">
-                            <!--{{createRecyclingChart}}-->
-                            {{createTransportationChart}}
+                    <div class="card-content row white-text no-padding">
+                        <div class="cols s12" id="recyclingChart">
+                            {{createRecyclingChart}}
                         </div>
                     </div>
                 </div>

@@ -76,7 +76,7 @@ function calculateFood() {
     var porkConsumed = isNaN(parseFloat(document.getElementById("porkConsumed").value)) ? 0 : parseFloat(document.getElementById("porkConsumed").value) * 0.11 * 52;
     var fishConsumed = isNaN(parseFloat(document.getElementById("fishConsumed").value)) ? 0 : parseFloat(document.getElementById("fishConsumed").value) * 0.11 * 52;
     var poultryConsumed  = isNaN(parseFloat(document.getElementById("poultryConsumed").value)) ? 0 : parseFloat(document.getElementById("poultryConsumed").value) * 0.11 * 52;
-
+    //lambConsumed = lambConsumed * 39.2;
 
     var totalFoodConsumed = 0.9 + ((lambConsumed * 39.2) + (beefConsumed * 27) + (porkConsumed * 12.1) + (fishConsumed * 11.9) + (poultryConsumed * 6.9))*(.001);
     Session.set("totalFoodCarbon", totalFoodConsumed);
